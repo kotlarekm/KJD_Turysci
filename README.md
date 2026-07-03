@@ -9,4 +9,4 @@ lata 2016-2025
 - jakie obiekty noclegowe wybierają turyści zagraniczni i jak to się różni od preferencji polskich turystów?
 -  ...a może wpadniesz na jeszcze inny pomysł? 🙂
 
-🧑🏼‍💼 👨🏻‍💼 Odbiorca: ogół Polaków / przeciętny „Kowalski”
+Odbiorca: ogół Polaków / przeciętny „Kowalski”

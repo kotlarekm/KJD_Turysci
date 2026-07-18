@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "54f1fc98e98aac28c419",
+  "position": {
+    "x": 9.72644376899696,
+    "y": 178.96656534954408,
+    "z": 9001,
+    "height": 85.59270516717325,
+    "width": 193.55623100303953,
+    "tabOrder": 9001
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DANE_Wielkopolska"
+                    }
+                  },
+                  "Property": "Turyści/Noclegi - etykieta"
+                }
+              },
+              "queryRef": "DANE_Wielkopolska.Turyści/Noclegi - etykieta",
+              "nativeQueryRef": "Turyści/Noclegi - etykieta",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "251b632d808726fbe4d0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Turyści/Noclegi - etykieta"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

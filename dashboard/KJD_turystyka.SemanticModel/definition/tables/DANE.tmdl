@@ -1,0 +1,79 @@
+table DANE
+	lineageTag: 3e16a0a4-78e5-4394-95e8-e44e49e1d269
+
+	column Kod
+		dataType: int64
+		formatString: 0
+		lineageTag: 496b7193-c2eb-4eb5-a7b9-cfd91d1a4e3a
+		summarizeBy: sum
+		sourceColumn: Kod
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nazwa
+		dataType: string
+		lineageTag: d0bd2800-8552-44a9-a4dc-120d233cbd8a
+		summarizeBy: none
+		sourceColumn: Nazwa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Turyści zagraniczni/Noclegi'
+		dataType: string
+		lineageTag: e0502654-a9a4-47a0-972b-afdacc8d6a45
+		summarizeBy: none
+		sourceColumn: Turyści zagraniczni/Noclegi
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kraje
+		dataType: string
+		lineageTag: aa737f90-2ae4-4bcc-9ad2-f278f66bb178
+		summarizeBy: none
+		sourceColumn: Kraje
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rok
+		dataType: int64
+		formatString: 0
+		lineageTag: 3581c92b-ff23-4521-8c55-70c7ae381ad1
+		summarizeBy: none
+		sourceColumn: Rok
+
+		annotation SummarizationSetBy = Automatic
+
+	column Wartosc
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e229e7c-cf91-4f23-98ac-6bc5332188b4
+		summarizeBy: sum
+		sourceColumn: Wartosc
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Turyści/Noclegi - etykieta'
+		dataType: string
+		lineageTag: 33d88e50-0abd-40ea-8a2b-27d1058e77b5
+		summarizeBy: none
+		sourceColumn: Turyści/Noclegi - etykieta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DANE = m
+		mode: import
+		source =
+				let
+				    Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\KJD_Turysci\KJD_Turysci\data\1_TurysciZagraniczniWgKrajow_2016-2025_WojewodztwaPowiaty_DLUGIE.xlsx"), null, true),
+				    DANE_Sheet = Źródło{[Item="DANE",Kind="Sheet"]}[Data],
+				    #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(DANE_Sheet, [PromoteAllScalars=true]),
+				    #"Zmieniono typ" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie",{{"Kod", Int64.Type}, {"Nazwa", type text}, {"Turyści zagraniczni/Noclegi", type text}, {"Kraje", type text}, {"Rok", Int64.Type}, {"Wartosc", Int64.Type}, {"Jednostka miary", type text}, {"Atrybut", type text}}),
+				    #"Usunięto kolumny" = Table.RemoveColumns(#"Zmieniono typ",{"Jednostka miary", "Atrybut"}),
+				    #"Dodano kolumnę warunkową" = Table.AddColumn(#"Usunięto kolumny", "Turyści/Noclegi - etykieta", each if Text.Contains([#"Turyści zagraniczni/Noclegi"], "turyści zagraniczni") then "Turyści" else if Text.Contains([#"Turyści zagraniczni/Noclegi"], "udzielone noclegi") then "Noclegi" else null)
+				in
+				    #"Dodano kolumnę warunkową"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Nawigacja
+

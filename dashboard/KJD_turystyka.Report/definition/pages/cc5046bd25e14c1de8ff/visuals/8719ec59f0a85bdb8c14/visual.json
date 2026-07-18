@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "8719ec59f0a85bdb8c14",
+  "position": {
+    "x": 1086.4437689969604,
+    "y": 96.291793313069917,
+    "z": 9004,
+    "height": 100.18237082066869,
+    "width": 192.58358662613983,
+    "tabOrder": 9004
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DANE_Wielkopolska"
+                    }
+                  },
+                  "Property": "Srednia dlugosc noclegu"
+                }
+              },
+              "queryRef": "DANE_Wielkopolska.Srednia dlugosc noclegu",
+              "nativeQueryRef": "Srednia dlugosc noclegu"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DANE_Wielkopolska"
+                  }
+                },
+                "Property": "Srednia dlugosc noclegu"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "59ddf651f55157834913",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Srednia dlugosc noclegu"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

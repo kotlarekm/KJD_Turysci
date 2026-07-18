@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "KJD_turystyka"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d5f13469-13c1-4ab9-83c8-d2760e5f1d1c"
+  }
+}

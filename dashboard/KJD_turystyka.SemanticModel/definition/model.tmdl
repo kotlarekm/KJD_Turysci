@@ -1,0 +1,20 @@
+model Model
+	culture: pl-PL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pl-PL
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DANE","DANE_Polska","DANE_Wielkopolska"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DANE
+ref table DANE_Polska
+ref table DANE_Wielkopolska
+
+ref cultureInfo pl-PL
+

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "8f10235a0a4c25c3a7ac",
+  "position": {
+    "x": 980.42553191489367,
+    "y": 10.699088145896656,
+    "z": 9000,
+    "height": 56.413373860182375,
+    "width": 299.57446808510639,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Źródło: GUS"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dane z: 07.07.2026"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "KJD_turystyka"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "34bd1178-41b9-49df-a6ca-1d4da762fa25"
+  }
+}

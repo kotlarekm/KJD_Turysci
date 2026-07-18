@@ -4,10 +4,10 @@
   "position": {
     "x": 1086.4437689969604,
     "y": 96.291793313069917,
-    "z": 9004,
+    "z": 13000,
     "height": 100.18237082066869,
     "width": 192.58358662613983,
-    "tabOrder": 9004
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -52,23 +52,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "59ddf651f55157834913",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Srednia dlugosc noclegu"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

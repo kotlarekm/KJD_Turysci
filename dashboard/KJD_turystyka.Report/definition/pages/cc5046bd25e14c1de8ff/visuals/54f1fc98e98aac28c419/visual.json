@@ -3,11 +3,11 @@
   "name": "54f1fc98e98aac28c419",
   "position": {
     "x": 9.72644376899696,
-    "y": 178.96656534954408,
-    "z": 9001,
+    "y": 193.06990881458967,
+    "z": 10000,
     "height": 85.59270516717325,
     "width": 193.55623100303953,
-    "tabOrder": 9001
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -55,23 +55,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "251b632d808726fbe4d0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Turyści/Noclegi - etykieta"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

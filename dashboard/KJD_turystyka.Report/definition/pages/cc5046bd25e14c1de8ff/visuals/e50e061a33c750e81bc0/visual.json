@@ -3,7 +3,7 @@
   "name": "e50e061a33c750e81bc0",
   "position": {
     "x": 9.72644376899696,
-    "y": 277.20364741641339,
+    "y": 292.7659574468085,
     "z": 4000,
     "height": 172.15805471124619,
     "width": 193.55623100303953,
@@ -44,13 +44,6 @@
                   "Value": "'Basic'"
                 }
               }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           }
         }
@@ -75,23 +68,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "be1b12ddae8db053c918",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Kraje"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

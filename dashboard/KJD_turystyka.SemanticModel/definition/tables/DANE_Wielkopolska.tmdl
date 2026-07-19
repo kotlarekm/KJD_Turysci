@@ -64,7 +64,7 @@ table DANE_Wielkopolska
 		dataType: int64
 		formatString: 0
 		lineageTag: 6eecb1a3-bed3-44f9-ae6a-d82c86935cf4
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Rok
 
 		annotation SummarizationSetBy = Automatic
@@ -102,17 +102,66 @@ table DANE_Wielkopolska
 
 		annotation SummarizationSetBy = Automatic
 
+	column Column1
+		dataType: string
+		lineageTag: 78132f93-7efd-416e-a16a-9b7911ccf37d
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column woj
+		dataType: string
+		lineageTag: 9346e17c-53c5-42ad-8b2b-ad1aab190484
+		summarizeBy: none
+		sourceColumn: woj
+
+		annotation SummarizationSetBy = Automatic
+
+	column pow
+		dataType: string
+		lineageTag: 0380c76f-137a-4cae-996a-b04dd63f6e14
+		summarizeBy: none
+		sourceColumn: pow
+
+		annotation SummarizationSetBy = Automatic
+
+	column gm
+		dataType: string
+		lineageTag: f74aa2fc-e429-4fc2-a733-43387dba5a15
+		summarizeBy: none
+		sourceColumn: gm
+
+		annotation SummarizationSetBy = Automatic
+
+	column rodzaj
+		dataType: string
+		lineageTag: 71bb342b-4d57-48d5-bb7b-ccc385328587
+		summarizeBy: none
+		sourceColumn: rodzaj
+
+		annotation SummarizationSetBy = Automatic
+
+	column wojewodztwo
+		dataType: string
+		lineageTag: e3ab2598-f5ef-49c9-b766-5a55e87a9c96
+		summarizeBy: none
+		sourceColumn: wojewodztwo
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DANE_Wielkopolska = m
 		mode: import
 		source =
 				let
-				    Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\KJD_Turysci\KJD_Turysci\data\1_TurysciZagraniczniWgKrajow_2016-2025_WojewodztwaPowiaty_DLUGIE.xlsx"), null, true),
-				    DANE_Sheet = Źródło{[Item="DANE",Kind="Sheet"]}[Data],
+				    Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\KJD_Turysci\KJD_Turysci\data\1_TurysciZagraniczniWgKrajow_2016-2025_WojewodztwaPowiaty_DLUGIE_mod.xlsx"), null, true),
+				    DANE_Sheet = Źródło{[Item = "Sheet1", Kind = "Sheet"]}[Data],
 				    #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(DANE_Sheet, [PromoteAllScalars=true]),
 				    #"Zmieniono typ" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie",{{"Kod", Int64.Type}, {"Nazwa", type text}, {"Turyści zagraniczni/Noclegi", type text}, {"Kraje", type text}, {"Rok", Int64.Type}, {"Wartosc", Int64.Type}, {"Jednostka miary", type text}, {"Atrybut", type text}}),
 				    #"Usunięto kolumny" = Table.RemoveColumns(#"Zmieniono typ",{"Jednostka miary", "Atrybut"}),
-				    #"Przefiltrowano wiersze" = Table.SelectRows(#"Usunięto kolumny", each [Kod] >= 3001011 and [Kod] < 3200000),
-				    #"Podzielono kolumnę według ogranicznika1" = Table.SplitColumn(#"Przefiltrowano wiersze", "Nazwa", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Nazwa.1", "Nazwa.2"}),
+				    #"Przefiltrowano wiersze3" = Table.SelectRows(#"Usunięto kolumny", each true),
+				    #"Przefiltrowano wiersze2" = Table.SelectRows(#"Przefiltrowano wiersze3", each true),
+				    #"Podzielono kolumnę według ogranicznika1" = Table.SplitColumn(#"Przefiltrowano wiersze2", "Nazwa", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Nazwa.1", "Nazwa.2"}),
 				    #"Zmieniono typ1" = Table.TransformColumnTypes(#"Podzielono kolumnę według ogranicznika1",{{"Nazwa.1", type text}, {"Nazwa.2", type text}}),
 				    #"Przefiltrowano wiersze1" = Table.SelectRows(#"Zmieniono typ1", each true),
 				    #"Zmieniono nazwy kolumn" = Table.RenameColumns(#"Przefiltrowano wiersze1",{{"Nazwa.2", "Nazwa powiatu"}}),

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "94b9541d1e4b09ab4acb",
+  "displayName": "Powiat Poznański",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "pageBinding": {
+    "name": "f4166d3a08c44f311bbb",
+    "type": "Default",
+    "parameters": []
+  }
+}

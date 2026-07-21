@@ -1,15 +1,13 @@
 table DANE_Wielkopolska
 	lineageTag: fafda941-9cd1-4d05-87ff-16fd348617f8
 
-	measure Turysci = CALCULATE(SUM(DANE_Wielkopolska[Wartosc]), DANE_Wielkopolska[Turyści zagraniczni/Noclegi] = "turyści zagraniczni (nierezydenci)")
-		formatString: 0
-		lineageTag: bd0eb0e5-3f0f-4d3f-be97-15bdaa1d2cca
-
-	measure Noclegi = CALCULATE(SUM(DANE_Wielkopolska[Wartosc]), DANE_Wielkopolska[Turyści zagraniczni/Noclegi] = "udzielone noclegi turystom zagranicznym (nierezydentom)")
-		formatString: 0
-		lineageTag: f21215e4-4967-44d0-a5b7-9648700739c2
-
-	measure 'Srednia dlugosc noclegu' = DIVIDE([Noclegi], [Turysci])
+	measure 'Srednia dlugosc noclegu' = ```
+			
+			    VAR Turysci = CALCULATE(SUM(DANE_Wielkopolska[Wartosc]), DANE_Wielkopolska[Turyści zagraniczni/Noclegi] = "turyści zagraniczni (nierezydenci)")
+			    VAR Noclegi = CALCULATE(SUM(DANE_Wielkopolska[Wartosc]), DANE_Wielkopolska[Turyści zagraniczni/Noclegi] = "udzielone noclegi turystom zagranicznym (nierezydentom)")
+			    RETURN
+			        DIVIDE(Noclegi, Turysci)
+			```
 		lineageTag: f9c5ea08-700b-4990-bc16-aa577272e8d3
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -35,11 +33,26 @@ table DANE_Wielkopolska
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Przyrost_YoY = ```
+			
+			    VAR MinYear = 
+			        CALCULATE(MIN(DANE_Wielkopolska[Rok]), ALLSELECTED(DANE_Wielkopolska))
+			    VAR MaxYear =
+			        CALCULATE(MAX(DANE_Wielkopolska[Rok]), ALLSELECTED(DANE_Wielkopolska))
+			    RETURN
+			    IF(MaxYear > MinYear,
+			        ((CALCULATE(SUM(DANE_Wielkopolska[Wartosc]),DANE_Wielkopolska[Rok] = MaxYear)) / (CALCULATE(SUM(DANE_Wielkopolska[Wartosc]),DANE_Wielkopolska[Rok] = (MaxYear-1))) -1),
+			        0)
+			```
+		lineageTag: b80e5e13-6d24-406a-be62-b27cd434e3b1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Kod
 		dataType: int64
 		formatString: 0
 		lineageTag: ca7080be-a3b1-496c-8072-89e969ca17e9
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Kod
 
 		annotation SummarizationSetBy = Automatic
@@ -150,6 +163,14 @@ table DANE_Wielkopolska
 
 		annotation SummarizationSetBy = Automatic
 
+	column Woj_powiat
+		dataType: string
+		lineageTag: 5ad872d4-e294-4629-a91a-19ff86d07dac
+		summarizeBy: none
+		sourceColumn: Woj_powiat
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DANE_Wielkopolska = m
 		mode: import
 		source =
@@ -159,15 +180,13 @@ table DANE_Wielkopolska
 				    #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(DANE_Sheet, [PromoteAllScalars=true]),
 				    #"Zmieniono typ" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie",{{"Kod", Int64.Type}, {"Nazwa", type text}, {"Turyści zagraniczni/Noclegi", type text}, {"Kraje", type text}, {"Rok", Int64.Type}, {"Wartosc", Int64.Type}, {"Jednostka miary", type text}, {"Atrybut", type text}}),
 				    #"Usunięto kolumny" = Table.RemoveColumns(#"Zmieniono typ",{"Jednostka miary", "Atrybut"}),
-				    #"Przefiltrowano wiersze3" = Table.SelectRows(#"Usunięto kolumny", each true),
-				    #"Przefiltrowano wiersze2" = Table.SelectRows(#"Przefiltrowano wiersze3", each true),
-				    #"Podzielono kolumnę według ogranicznika1" = Table.SplitColumn(#"Przefiltrowano wiersze2", "Nazwa", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Nazwa.1", "Nazwa.2"}),
+				    #"Podzielono kolumnę według ogranicznika1" = Table.SplitColumn(#"Usunięto kolumny", "Nazwa", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Nazwa.1", "Nazwa.2"}),
 				    #"Zmieniono typ1" = Table.TransformColumnTypes(#"Podzielono kolumnę według ogranicznika1",{{"Nazwa.1", type text}, {"Nazwa.2", type text}}),
-				    #"Przefiltrowano wiersze1" = Table.SelectRows(#"Zmieniono typ1", each true),
-				    #"Zmieniono nazwy kolumn" = Table.RenameColumns(#"Przefiltrowano wiersze1",{{"Nazwa.2", "Nazwa powiatu"}}),
-				    #"Dodano kolumnę warunkową" = Table.AddColumn(#"Zmieniono nazwy kolumn", "Turyści/Noclegi - etykieta", each if Text.Contains([#"Turyści zagraniczni/Noclegi"], "turyści zagraniczni") then "Turyści" else if Text.Contains([#"Turyści zagraniczni/Noclegi"], "udzielone noclegi") then "Noclegi" else null)
+				    #"Zmieniono nazwy kolumn" = Table.RenameColumns(#"Zmieniono typ1",{{"Nazwa.2", "Nazwa powiatu"}}),
+				    #"Dodano kolumnę warunkową" = Table.AddColumn(#"Zmieniono nazwy kolumn", "Turyści/Noclegi - etykieta", each if Text.Contains([#"Turyści zagraniczni/Noclegi"], "turyści zagraniczni") then "Turyści" else if Text.Contains([#"Turyści zagraniczni/Noclegi"], "udzielone noclegi") then "Noclegi" else null),
+				    #"Wstawiono scaloną kolumnę" = Table.AddColumn(#"Dodano kolumnę warunkową", "Woj_powiat", each Text.Combine({Text.From([wojewodztwo], "pl-PL"), [Nazwa powiatu]}, " "), type text)
 				in
-				    #"Dodano kolumnę warunkową"
+				    #"Wstawiono scaloną kolumnę"
 
 	annotation PBI_NavigationStepName = Nawigacja
 

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "8f10235a0a4c25c3a7ac",
+  "name": "238baed85e9a367005bf",
   "position": {
-    "x": 980.42553191489367,
-    "y": 10.699088145896656,
-    "z": 9000,
-    "height": 56.413373860182375,
-    "width": 299.57446808510639,
-    "tabOrder": 9000
+    "x": 9.72644376899696,
+    "y": 0,
+    "z": 7000,
+    "height": 59.331306990881458,
+    "width": 792.70516717325233,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,14 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Źródło: GUS"
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Dane z: 07.07.2026"
+                    "value": "Turyści zagraniczni w Wielkopolsce - Noclegi",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "24pt"
+                    }
                   }
                 ]
               }

@@ -8,11 +8,14 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["DANE_Wielkopolska"]
+annotation PBI_QueryOrder = ["DANE_Wielkopolska","Gminy_powPoznańkiego","MiejscaNoclegowe"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table DANE_Wielkopolska
+ref table Gminy_powPoznańkiego
+ref table DIM_Kategoria
+ref table MiejscaNoclegowe
 
 ref cultureInfo pl-PL
 

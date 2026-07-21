@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "0ae2463c4e243da7c138",
   "position": {
-    "x": 1087.4164133738602,
-    "y": 200.36474164133739,
-    "z": 14000,
-    "height": 135.19756838905775,
+    "x": 1086.9300911854102,
+    "y": 186.26139817629181,
+    "z": 13000,
+    "height": 117.68996960486322,
     "width": 192.58358662613983,
-    "tabOrder": 14000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -272,7 +272,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Noclegi'"
+                          "Value": "'Turyści'"
                         }
                       }
                     ]

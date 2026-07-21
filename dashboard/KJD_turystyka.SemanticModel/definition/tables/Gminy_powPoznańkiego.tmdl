@@ -1,0 +1,139 @@
+table Gminy_powPoznańkiego
+	lineageTag: 5264d48d-066f-435d-a5a3-8b813c93b128
+
+	column Column1
+		dataType: int64
+		formatString: 0
+		lineageTag: cb3627c5-9b09-4c44-afcf-117e95dfa795
+		summarizeBy: sum
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kod
+		dataType: int64
+		formatString: 0
+		lineageTag: 096f4da8-c995-4560-8930-ec4721de3591
+		summarizeBy: none
+		sourceColumn: Kod
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nazwa
+		dataType: string
+		lineageTag: 394ea947-451f-4209-be61-7de1323608b1
+		summarizeBy: none
+		sourceColumn: Nazwa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Turyści zagraniczni/Noclegi'
+		dataType: string
+		lineageTag: d77c6848-8f33-401e-852f-c081a2d6236e
+		summarizeBy: none
+		sourceColumn: Turyści zagraniczni/Noclegi
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kraje
+		dataType: string
+		lineageTag: 2a0d0a92-f597-482d-91d5-ce3270c225e6
+		summarizeBy: none
+		sourceColumn: Kraje
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rok
+		dataType: int64
+		formatString: 0
+		lineageTag: 23b17a79-1a93-4ff3-9040-f989b25cfcd9
+		summarizeBy: sum
+		sourceColumn: Rok
+
+		annotation SummarizationSetBy = Automatic
+
+	column Wartosc
+		dataType: int64
+		formatString: 0
+		lineageTag: 459db25c-5a8b-4e8b-8be0-8c31f3ba0abd
+		summarizeBy: sum
+		sourceColumn: Wartosc
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jednostka miary'
+		dataType: string
+		lineageTag: dba51f30-21ca-4f9d-9804-f5e216307110
+		summarizeBy: none
+		sourceColumn: Jednostka miary
+
+		annotation SummarizationSetBy = Automatic
+
+	column Atrybut
+		dataType: string
+		lineageTag: 7d119bb4-30de-422c-9dcd-f00044e18f12
+		summarizeBy: none
+		sourceColumn: Atrybut
+
+		annotation SummarizationSetBy = Automatic
+
+	column woj
+		dataType: int64
+		formatString: 0
+		lineageTag: 880be4f3-480f-413a-a675-728b1ce3109c
+		summarizeBy: sum
+		sourceColumn: woj
+
+		annotation SummarizationSetBy = Automatic
+
+	column pow
+		dataType: int64
+		formatString: 0
+		lineageTag: bef9311e-46e8-45aa-8cff-8a5a9c48c436
+		summarizeBy: sum
+		sourceColumn: pow
+
+		annotation SummarizationSetBy = Automatic
+
+	column gm
+		dataType: int64
+		formatString: 0
+		lineageTag: d23441dc-4728-42be-ada2-03c38a40ead8
+		summarizeBy: sum
+		sourceColumn: gm
+
+		annotation SummarizationSetBy = Automatic
+
+	column rodzaj
+		dataType: int64
+		formatString: 0
+		lineageTag: 82abefb2-d269-4b8f-b0df-abe2ec654737
+		summarizeBy: sum
+		sourceColumn: rodzaj
+
+		annotation SummarizationSetBy = Automatic
+
+	column wojewodztwo
+		dataType: string
+		lineageTag: 8d9ecfb2-e311-4f2a-b2af-f0f52c41c85b
+		summarizeBy: none
+		sourceColumn: wojewodztwo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Gminy_powPoznańkiego = m
+		mode: import
+		source =
+				let
+				  Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\KJD_Turysci\KJD_Turysci\data\5_TurysciZagraniczniWgKrajow_powPoznanski_2016-2025_Gminy_DLUGIE_mod.xlsx"), null, true),
+				  #"Nawigacja 1" = Źródło{[Item = "Sheet1", Kind = "Sheet"]}[Data],
+				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(#"Nawigacja 1", [PromoteAllScalars = true]),
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"Column1", Int64.Type}, {"Kod", Int64.Type}, {"Nazwa", type text}, {"Turyści zagraniczni/Noclegi", type text}, {"Kraje", type text}, {"Rok", Int64.Type}, {"Wartosc", Int64.Type}, {"Jednostka miary", type text}, {"Atrybut", type text}, {"woj", Int64.Type}, {"pow", Int64.Type}, {"gm", Int64.Type}, {"rodzaj", Int64.Type}, {"wojewodztwo", type text}}, "pl"),
+				    #"Przefiltrowano wiersze" = Table.SelectRows(#"Zmieniono typ kolumny", each ([pow] = 3021))
+				in
+				  #"Przefiltrowano wiersze"
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Table
+

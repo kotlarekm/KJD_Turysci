@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "08dd556b00ec32f2d510",
+  "position": {
+    "x": 1087.1732522796351,
+    "y": 67.112462006079028,
+    "z": 12000,
+    "height": 100.18237082066869,
+    "width": 192.58358662613983,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_Kategoria"
+                    }
+                  },
+                  "Property": "Srednia dlugosc noclegu Poznanski"
+                }
+              },
+              "queryRef": "DIM_Kategoria.Srednia dlugosc noclegu Poznanski",
+              "nativeQueryRef": "Srednia dlugosc noclegu Poznanski"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DIM_Kategoria"
+                  }
+                },
+                "Property": "Srednia dlugosc noclegu Poznanski"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

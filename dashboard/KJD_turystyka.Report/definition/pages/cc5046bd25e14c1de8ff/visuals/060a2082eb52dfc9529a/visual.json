@@ -4,10 +4,10 @@
   "position": {
     "x": 237.32522796352583,
     "y": 300.54711246200611,
-    "z": 12000,
+    "z": 11000,
     "height": 192.58358662613983,
     "width": 402.67477203647417,
-    "tabOrder": 12000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "lineChart",
@@ -85,6 +85,21 @@
               "expr": {
                 "Literal": {
                   "Value": "'Linia trendu 1'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Średnia długość noclegu wg lat'"
                 }
               }
             }

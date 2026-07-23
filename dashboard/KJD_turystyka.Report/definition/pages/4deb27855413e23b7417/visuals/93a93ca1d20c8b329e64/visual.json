@@ -4,10 +4,10 @@
   "position": {
     "x": 251.11111111111111,
     "y": 492.22222222222223,
-    "z": 17004,
+    "z": 11000,
     "height": 220,
     "width": 402.22222222222223,
-    "tabOrder": 17004
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "lineChart",
@@ -193,39 +193,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "1a10850313400234e88a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "MiejscaNoclegowe"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0b16ac55c706b0559212",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "MiejscaNoclegowe"
-              }
-            },
-            "Property": "Rok"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "97091c825b0a894eb98b",
         "field": {

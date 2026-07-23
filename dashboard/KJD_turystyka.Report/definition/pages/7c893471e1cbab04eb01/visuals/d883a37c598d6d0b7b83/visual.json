@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "d883a37c598d6d0b7b83",
   "position": {
-    "x": 272.34042553191489,
+    "x": 240.24316109422494,
     "y": 67.112462006079028,
     "z": 0,
-    "height": 284.01215805471128,
-    "width": 267.47720364741645,
+    "height": 312.21884498480244,
+    "width": 299.57446808510639,
     "tabOrder": 0
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -188,6 +188,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "355b5c97dd8c2c3e001c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Turyści/Noclegi - etykieta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ff8663c52bda60204797",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DANE_Wielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

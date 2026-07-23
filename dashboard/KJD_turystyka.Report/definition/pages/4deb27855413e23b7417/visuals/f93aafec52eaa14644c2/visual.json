@@ -4,10 +4,10 @@
   "position": {
     "x": 653.33333333333337,
     "y": 58.888888888888886,
-    "z": 17001,
+    "z": 8000,
     "height": 634.44444444444446,
     "width": 624.44444444444446,
-    "tabOrder": 17001
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -365,58 +365,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "c5f1487bb89b026d6150",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "MiejscaNoclegowe"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c95c269da73420549580",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2301c11e6de9d9a055c0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Nazwa powiatu"
-          }
-        },
-        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

@@ -5,12 +5,12 @@
     "x": 568.02431610942256,
     "y": 67.112462006079028,
     "z": 20000,
-    "height": 284.01215805471128,
-    "width": 284.98480243161094,
+    "height": 312.21884498480244,
+    "width": 311.24620060790272,
     "tabOrder": 20000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -242,6 +242,39 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "e5ed5ef5334870316cac",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Turyści/Noclegi - etykieta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4e96d59b43b83e258134",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DANE_Wielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

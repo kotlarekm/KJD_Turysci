@@ -4,10 +4,10 @@
   "position": {
     "x": 9.72644376899696,
     "y": 479.02735562310028,
-    "z": 6000,
+    "z": 3000,
     "height": 179.93920972644378,
     "width": 193.55623100303953,
-    "tabOrder": 6000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -85,23 +85,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "06058388eb7e1876c236",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Nazwa powiatu"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

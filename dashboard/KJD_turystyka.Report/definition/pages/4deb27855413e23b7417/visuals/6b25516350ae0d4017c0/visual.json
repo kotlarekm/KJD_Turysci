@@ -4,10 +4,10 @@
   "position": {
     "x": 251.11111111111111,
     "y": 58.888888888888886,
-    "z": 17002,
+    "z": 9000,
     "height": 220,
     "width": 402.22222222222223,
-    "tabOrder": 17002
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "lineChart",
@@ -170,56 +170,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b862bdc16da11e22c04e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Rok"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3be5ca007cb9a420ba0d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Turyści/Noclegi - etykieta"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "868bfc8f50d0e05dd073",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

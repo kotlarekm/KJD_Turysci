@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "db444774497157bee5ca",
   "position": {
-    "x": 272.34042553191489,
+    "x": 240.24316109422494,
     "y": 389.05775075987845,
     "z": 21000,
-    "height": 292.7659574468085,
-    "width": 267.47720364741645,
+    "height": 323.89057750759878,
+    "width": 299.57446808510639,
     "tabOrder": 21000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -90,21 +90,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f098db3adae6e9087e2b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "CAGR"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6f58af74e7207c043255",
+        "name": "4e85b513b3398d6e466e",
         "field": {
           "Column": {
             "Expression": {
@@ -118,7 +104,7 @@
         "type": "Categorical"
       },
       {
-        "name": "27a5b0609c5e9a21149a",
+        "name": "e2dc71fa334788068007",
         "field": {
           "Measure": {
             "Expression": {
@@ -127,6 +113,20 @@
               }
             },
             "Property": "Przyrost_YoY"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0f705f6d9482d3ad39c0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "CAGR"
           }
         },
         "type": "Advanced"

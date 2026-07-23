@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "974f437bf1a46d2e7893",
   "position": {
-    "x": 884.13373860182242,
-    "y": 477.75075987841939,
+    "x": 885.10638297872345,
+    "y": 477.56838905775078,
     "z": 12000,
     "height": 116.71732522796353,
     "width": 192.58358662613983,
@@ -224,6 +224,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "426d74a44007441c33e2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "CAGR"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

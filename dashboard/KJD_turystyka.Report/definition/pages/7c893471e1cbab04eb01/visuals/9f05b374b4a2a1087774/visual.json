@@ -3,14 +3,14 @@
   "name": "9f05b374b4a2a1087774",
   "position": {
     "x": 568.02431610942256,
-    "y": 379.3313069908815,
+    "y": 389.05775075987845,
     "z": 4000,
-    "height": 302.4924012158055,
-    "width": 316.10942249240122,
+    "height": 323.89057750759878,
+    "width": 311.24620060790272,
     "tabOrder": 4000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -189,6 +189,53 @@
             }
           ]
         }
+      },
+      {
+        "name": "d1bc4a21d78e84a1559d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "wojewodztwo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bbb3d9ca2003240e0761",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Turyści/Noclegi - etykieta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9c553c7ca700a00e9385",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DANE_Wielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

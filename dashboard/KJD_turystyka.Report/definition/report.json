@@ -33,6 +33,19 @@
           }
         }
       }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
     ]
   },
   "resourcePackages": [
@@ -55,6 +68,11 @@
           "name": "NewExecutive4050200826561089.json",
           "path": "NewExecutive4050200826561089.json",
           "type": "CustomTheme"
+        },
+        {
+          "name": "powiaty-medium9784854236970548.geojson",
+          "path": "powiaty-medium9784854236970548.geojson",
+          "type": "ShapeMap"
         }
       ]
     }

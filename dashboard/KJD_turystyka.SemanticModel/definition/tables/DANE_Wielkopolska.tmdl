@@ -163,19 +163,30 @@ table DANE_Wielkopolska
 
 		annotation SummarizationSetBy = Automatic
 
-	column Woj_powiat
+	column 'Powiat nazwa'
 		dataType: string
-		lineageTag: 5ad872d4-e294-4629-a91a-19ff86d07dac
+		lineageTag: 5f201d1a-3cf0-48e0-b113-a515a1a99bb7
 		summarizeBy: none
-		sourceColumn: Woj_powiat
+		sourceColumn: Powiat nazwa
 
 		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'wojewodztwo Hierarchy'
+		lineageTag: 63df2368-28d2-4af4-b07f-dde953c31996
+
+		level wojewodztwo
+			lineageTag: d6258791-3905-4b21-b02f-0b852c18aa54
+			column: wojewodztwo
+
+		level 'Powiat nazwa'
+			lineageTag: e2ba185c-4679-40e6-8a14-f90e82a6c133
+			column: 'Powiat nazwa'
 
 	partition DANE_Wielkopolska = m
 		mode: import
 		source =
 				let
-				    Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\KJD_Turysci\KJD_Turysci\data\1_TurysciZagraniczniWgKrajow_2016-2025_WojewodztwaPowiaty_DLUGIE_mod.xlsx"), null, true),
+				    Źródło = Excel.Workbook(File.Contents("C:\Work\Tools\KJD_Turystyka\data\1_TurysciZagraniczniWgKrajow_2016-2025_WojewodztwaPowiaty_DLUGIE_mod.xlsx"), null, true),
 				    DANE_Sheet = Źródło{[Item = "Sheet1", Kind = "Sheet"]}[Data],
 				    #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(DANE_Sheet, [PromoteAllScalars=true]),
 				    #"Zmieniono typ" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie",{{"Kod", Int64.Type}, {"Nazwa", type text}, {"Turyści zagraniczni/Noclegi", type text}, {"Kraje", type text}, {"Rok", Int64.Type}, {"Wartosc", Int64.Type}, {"Jednostka miary", type text}, {"Atrybut", type text}}),
@@ -184,9 +195,10 @@ table DANE_Wielkopolska
 				    #"Zmieniono typ1" = Table.TransformColumnTypes(#"Podzielono kolumnę według ogranicznika1",{{"Nazwa.1", type text}, {"Nazwa.2", type text}}),
 				    #"Zmieniono nazwy kolumn" = Table.RenameColumns(#"Zmieniono typ1",{{"Nazwa.2", "Nazwa powiatu"}}),
 				    #"Dodano kolumnę warunkową" = Table.AddColumn(#"Zmieniono nazwy kolumn", "Turyści/Noclegi - etykieta", each if Text.Contains([#"Turyści zagraniczni/Noclegi"], "turyści zagraniczni") then "Turyści" else if Text.Contains([#"Turyści zagraniczni/Noclegi"], "udzielone noclegi") then "Noclegi" else null),
-				    #"Wstawiono scaloną kolumnę" = Table.AddColumn(#"Dodano kolumnę warunkową", "Woj_powiat", each Text.Combine({Text.From([wojewodztwo], "pl-PL"), [Nazwa powiatu]}, " "), type text)
+				    #"Changed Type" = Table.TransformColumnTypes(#"Dodano kolumnę warunkową",{{"wojewodztwo", type text}, {"Nazwa powiatu", type text}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Powiat nazwa", each Text.Lower("powiat " & Text.Replace([Nazwa powiatu], "m. ","") ))
 				in
-				    #"Wstawiono scaloną kolumnę"
+				    #"Added Custom"
 
 	annotation PBI_NavigationStepName = Nawigacja
 

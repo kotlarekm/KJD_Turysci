@@ -70,6 +70,11 @@
           "type": "CustomTheme"
         },
         {
+          "name": "poland.municipalities5574192955099947.json",
+          "path": "poland.municipalities5574192955099947.json",
+          "type": "ShapeMap"
+        },
+        {
           "name": "powiaty-medium9784854236970548.geojson",
           "path": "powiaty-medium9784854236970548.geojson",
           "type": "ShapeMap"

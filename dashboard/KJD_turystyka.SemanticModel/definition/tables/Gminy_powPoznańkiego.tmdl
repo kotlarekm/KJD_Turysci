@@ -1,15 +1,6 @@
 table Gminy_powPoznańkiego
 	lineageTag: 5264d48d-066f-435d-a5a3-8b813c93b128
 
-	column Column1
-		dataType: int64
-		formatString: 0
-		lineageTag: cb3627c5-9b09-4c44-afcf-117e95dfa795
-		summarizeBy: sum
-		sourceColumn: Column1
-
-		annotation SummarizationSetBy = Automatic
-
 	column Kod
 		dataType: int64
 		formatString: 0
@@ -121,17 +112,29 @@ table Gminy_powPoznańkiego
 
 		annotation SummarizationSetBy = Automatic
 
+	hierarchy 'wojewodztwo Hierarchy'
+		lineageTag: e7629c8d-f1b7-4415-a30d-2c6cf2cadc2c
+
+		level wojewodztwo
+			lineageTag: eba41b10-ccd2-4619-a1e0-bc69afcc903c
+			column: wojewodztwo
+
+		level Kod
+			lineageTag: c0de35f9-fc48-48ae-909a-6b97b9d30b1d
+			column: Kod
+
 	partition Gminy_powPoznańkiego = m
 		mode: import
 		source =
 				let
-				  Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\KJD_Turysci\KJD_Turysci\data\5_TurysciZagraniczniWgKrajow_powPoznanski_2016-2025_Gminy_DLUGIE_mod.xlsx"), null, true),
+				  Źródło = Excel.Workbook(File.Contents("C:\Work\Tools\KJD_Turystyka\data\5_TurysciZagraniczniWgKrajow_powPoznanski_2016-2025_Gminy_DLUGIE_mod.xlsx"), null, true),
 				  #"Nawigacja 1" = Źródło{[Item = "Sheet1", Kind = "Sheet"]}[Data],
 				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(#"Nawigacja 1", [PromoteAllScalars = true]),
 				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"Column1", Int64.Type}, {"Kod", Int64.Type}, {"Nazwa", type text}, {"Turyści zagraniczni/Noclegi", type text}, {"Kraje", type text}, {"Rok", Int64.Type}, {"Wartosc", Int64.Type}, {"Jednostka miary", type text}, {"Atrybut", type text}, {"woj", Int64.Type}, {"pow", Int64.Type}, {"gm", Int64.Type}, {"rodzaj", Int64.Type}, {"wojewodztwo", type text}}, "pl"),
-				    #"Przefiltrowano wiersze" = Table.SelectRows(#"Zmieniono typ kolumny", each ([pow] = 3021))
+				    #"Przefiltrowano wiersze" = Table.SelectRows(#"Zmieniono typ kolumny", each ([pow] = 3021)),
+				    #"Removed Columns" = Table.RemoveColumns(#"Przefiltrowano wiersze",{"Column1"})
 				in
-				  #"Przefiltrowano wiersze"
+				  #"Removed Columns"
 
 	annotation PBI_NavigationStepName = Nawigacja
 

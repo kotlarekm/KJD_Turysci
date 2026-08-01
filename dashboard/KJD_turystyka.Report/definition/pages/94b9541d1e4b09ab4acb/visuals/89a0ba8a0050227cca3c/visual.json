@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "89a0ba8a0050227cca3c",
   "position": {
     "x": 238.29787234042556,
@@ -10,24 +10,49 @@
     "tabOrder": 7000
   },
   "visual": {
-    "visualType": "filledMap",
+    "visualType": "azureMap",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "HierarchyLevel": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Gminy_powPoznańkiego"
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Gminy_powPoznańkiego"
+                        }
+                      },
+                      "Hierarchy": "wojewodztwo Hierarchy"
                     }
                   },
-                  "Property": "wojewodztwo"
+                  "Level": "wojewodztwo"
                 }
               },
-              "queryRef": "Gminy_powPoznańkiego.wojewodztwo",
-              "nativeQueryRef": "wojewodztwo",
+              "queryRef": "Gminy_powPoznańkiego.wojewodztwo Hierarchy.wojewodztwo",
+              "nativeQueryRef": "wojewodztwo Hierarchy wojewodztwo",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Gminy_powPoznańkiego"
+                        }
+                      },
+                      "Hierarchy": "wojewodztwo Hierarchy"
+                    }
+                  },
+                  "Level": "Kod"
+                }
+              },
+              "queryRef": "Gminy_powPoznańkiego.wojewodztwo Hierarchy.Kod",
+              "nativeQueryRef": "wojewodztwo Hierarchy Kod",
               "active": true
             }
           ]
@@ -60,35 +85,144 @@
     "objects": {
       "dataPoint": [
         {
+          "properties": {}
+        }
+      ],
+      "mapControls": [
+        {
           "properties": {
-            "fillRule": {
-              "linearGradient2": {
-                "min": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'minColor'"
-                      }
+            "defaultStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'road'"
+                }
+              }
+            },
+            "showStylePicker": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showNavigationControls": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showSelectionControl": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "zoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "7.64D"
+                }
+              }
+            },
+            "centerLatitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "52.31635589335971D"
+                }
+              }
+            },
+            "centerLongitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "17.154442154265666D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "bubbleLayer": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "filledMap": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "mapTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "40L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "referenceLayer": [
+        {
+          "properties": {
+            "additionalDatasource": {
+              "geoJson": {
+                "type": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'packaged'"
                     }
                   }
                 },
-                "max": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'maxColor'"
-                      }
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'poland.municipalities.json'"
                     }
                   }
                 },
-                "nullColoringStrategy": {
-                  "strategy": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'asZero'"
-                      }
+                "content": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "poland.municipalities5574192955099947.json"
                     }
                   }
+                }
+              }
+            },
+            "unmappedObjectVisibility": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -97,5 +231,66 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "73f526014d5d00456710",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Gminy_powPoznańkiego"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9d94bc6040da8aa45020",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Gminy_powPoznańkiego"
+                  }
+                },
+                "Hierarchy": "wojewodztwo Hierarchy"
+              }
+            },
+            "Level": "wojewodztwo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "28e3a4b0d7be624c8230",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Gminy_powPoznańkiego"
+                  }
+                },
+                "Hierarchy": "wojewodztwo Hierarchy"
+              }
+            },
+            "Level": "Kod"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

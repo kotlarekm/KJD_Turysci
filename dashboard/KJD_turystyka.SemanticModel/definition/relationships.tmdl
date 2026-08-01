@@ -1,22 +1,5 @@
-relationship c181dfd8-18a3-9bae-5d01-68491e77e0bc
-	crossFilteringBehavior: bothDirections
-	toCardinality: many
-	fromColumn: DANE_Wielkopolska.Kod
-	toColumn: Gminy_powPoznańkiego.Kod
-
-relationship 5d662442-13a4-8cd1-c442-1d21a7079f76
-	isActive: false
-	crossFilteringBehavior: bothDirections
-	toCardinality: many
-	fromColumn: DANE_Wielkopolska.Rok
-	toColumn: Gminy_powPoznańkiego.Rok
-
 relationship a313a35f-094a-7b32-ad70-2cdccbb0aa00
 	fromColumn: DANE_Wielkopolska.'Turyści zagraniczni/Noclegi'
-	toColumn: DIM_Kategoria.Kategoria
-
-relationship eb939f8b-0466-da21-3e01-f690f85f6594
-	fromColumn: Gminy_powPoznańkiego.'Turyści zagraniczni/Noclegi'
 	toColumn: DIM_Kategoria.Kategoria
 
 relationship cb1e7fd2-3ce4-6670-3bf6-bf5613dc9e13

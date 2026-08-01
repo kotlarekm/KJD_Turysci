@@ -5,12 +5,12 @@ table DIM_Kategoria
 			
 			VAR Turysci =
 			    CALCULATE(
-			        SUM('Gminy_powPoznańkiego'[Wartosc]),
+			        SUM('DANE_Wielkopolska'[Wartosc]),
 			        DIM_Kategoria[Kategoria] = "turyści zagraniczni (nierezydenci)"
 			    )
 			VAR Noclegi =
 			    CALCULATE(
-			        SUM('Gminy_powPoznańkiego'[Wartosc]),
+			        SUM('DANE_Wielkopolska'[Wartosc]),
 			        DIM_Kategoria[Kategoria] = "udzielone noclegi turystom zagranicznym (nierezydentom)"
 			    )
 			RETURN

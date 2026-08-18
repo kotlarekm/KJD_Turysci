@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "6487dd60772d996c9809",
   "position": {
     "x": 1087.41641337386,
@@ -28,7 +28,7 @@
               },
               "queryRef": "DANE_Wielkopolska.Przyrost_YoY",
               "nativeQueryRef": "Przyrost_YoY",
-              "format": "0.00%;-0.00%;0.00%"
+              "format": "0.0%;-0.0%;0.0%"
             }
           ]
         }

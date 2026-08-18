@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e3b9bac2b9ea407c39cd",
   "position": {
     "x": 9.72644376899696,
-    "y": 193.06990881458967,
+    "y": 193.55623100303953,
     "z": 6000,
-    "height": 85.59270516717325,
+    "height": 98.2370820668693,
     "width": 193.55623100303953,
     "tabOrder": 6000
   },
@@ -83,5 +83,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e594504fbe25af333daf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Turyści/Noclegi - etykieta"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "2975609b598e2e3f8390",
   "position": {
     "x": 1086.4437689969604,
     "y": 459.57446808510645,
-    "z": 14000,
+    "z": 11000,
     "height": 116.71732522796353,
     "width": 192.58358662613983,
-    "tabOrder": 14000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -28,7 +28,7 @@
               },
               "queryRef": "DANE_Wielkopolska.CAGR",
               "nativeQueryRef": "CAGR",
-              "format": "0.00%;-0.00%;0.00%"
+              "format": "0.0%;-0.0%;0.0%"
             }
           ]
         }

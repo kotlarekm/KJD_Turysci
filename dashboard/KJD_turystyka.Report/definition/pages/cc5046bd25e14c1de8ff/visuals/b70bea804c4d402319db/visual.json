@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "b70bea804c4d402319db",
   "position": {
     "x": 1087.41641337386,
     "y": 595.258358662614,
-    "z": 16000,
+    "z": 15000,
     "height": 117.68996960486322,
     "width": 192.58358662613983,
-    "tabOrder": 16000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -28,7 +28,7 @@
               },
               "queryRef": "DANE_Wielkopolska.Przyrost_YoY",
               "nativeQueryRef": "Przyrost_YoY",
-              "format": "0.00%;-0.00%;0.00%"
+              "format": "0.0%;-0.0%;0.0%"
             }
           ]
         }

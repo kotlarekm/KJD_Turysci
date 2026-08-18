@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "ccccb0c93076ad257a15",
   "position": {
-    "x": 1087.1732522796351,
-    "y": 67.112462006079028,
+    "x": 1087.4164133738602,
+    "y": 79.756838905775084,
     "z": 8000,
-    "height": 100.18237082066869,
+    "height": 119.63525835866263,
     "width": 192.58358662613983,
     "tabOrder": 8000
   },
@@ -51,6 +51,64 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "label": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DANE_Wielkopolska.Srednia dlugosc noclegu"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Średnia długość noclegu'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2df720ddcddcf92d5b9a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Srednia dlugosc noclegu"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

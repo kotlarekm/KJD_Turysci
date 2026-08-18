@@ -4,10 +4,10 @@
   "position": {
     "x": 237.32522796352583,
     "y": 425.04559270516717,
-    "z": 17001,
+    "z": 17000,
     "height": 294.71124620060789,
     "width": 402.67477203647417,
-    "tabOrder": 17001
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "azureMap",
@@ -56,9 +56,6 @@
               "active": true
             }
           ]
-        },
-        "Series": {
-          "projections": []
         },
         "Size": {
           "projections": [
@@ -349,63 +346,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "54828a90138cabaa07ad",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Hierarchy": "wojewodztwo Hierarchy"
-              }
-            },
-            "Level": "wojewodztwo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0559173465a963ad527e",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Hierarchy": "wojewodztwo Hierarchy"
-              }
-            },
-            "Level": "Powiat nazwa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c69446a362506103d102",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "348705c090a971385b0a",
         "field": {

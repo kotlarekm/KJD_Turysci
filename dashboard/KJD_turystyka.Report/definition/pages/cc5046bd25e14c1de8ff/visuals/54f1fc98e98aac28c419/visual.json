@@ -3,11 +3,11 @@
   "name": "54f1fc98e98aac28c419",
   "position": {
     "x": 9.72644376899696,
-    "y": 193.06990881458967,
-    "z": 9000,
-    "height": 85.59270516717325,
+    "y": 193.55623100303953,
+    "z": 8000,
+    "height": 99.209726443769,
     "width": 193.55623100303953,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -87,7 +87,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0f51cf040590158361cb",
+        "name": "3a97b4f8fef32019d421",
         "field": {
           "Column": {
             "Expression": {

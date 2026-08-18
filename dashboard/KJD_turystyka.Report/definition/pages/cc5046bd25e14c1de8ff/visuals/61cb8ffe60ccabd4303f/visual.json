@@ -142,6 +142,46 @@
                   "Value": "'markerCircleDefault'"
                 }
               }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Suma wartości'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
             }
           }
         }
@@ -174,7 +214,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "9c772f6e90989737bdca",
+        "name": "b1c167739925afd30853",
         "field": {
           "Column": {
             "Expression": {
@@ -188,7 +228,7 @@
         "type": "Advanced"
       },
       {
-        "name": "5db98e0c7700019de00a",
+        "name": "3c76c66a817137ae4b1f",
         "field": {
           "Column": {
             "Expression": {
@@ -202,7 +242,7 @@
         "type": "Categorical"
       },
       {
-        "name": "95ed563e0d0a3b8eb66e",
+        "name": "1f94e035a002b44946a1",
         "field": {
           "Aggregation": {
             "Expression": {

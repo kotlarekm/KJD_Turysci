@@ -4,10 +4,10 @@
   "position": {
     "x": 237.32522796352583,
     "y": 425.04559270516717,
-    "z": 17001,
+    "z": 15000,
     "height": 294.71124620060789,
     "width": 402.67477203647417,
-    "tabOrder": 17001
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "azureMap",
@@ -399,63 +399,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "71909860e060bc4d71db",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Hierarchy": "wojewodztwo Hierarchy"
-              }
-            },
-            "Level": "wojewodztwo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7c0b39dfbd9edc1addbd",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Hierarchy": "wojewodztwo Hierarchy"
-              }
-            },
-            "Level": "Powiat nazwa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a28ab32f05b0d7bd9400",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

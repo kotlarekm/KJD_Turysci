@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d883a37c598d6d0b7b83",
   "position": {
     "x": 240.24316109422494,
@@ -98,6 +98,47 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Suma turystów/noclegów'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -164,6 +205,13 @@
                               "Value": "'ogółem'"
                             }
                           }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'pozostałe kraje'"
+                            }
+                          }
                         ]
                       ]
                     }
@@ -190,7 +238,7 @@
         }
       },
       {
-        "name": "355b5c97dd8c2c3e001c",
+        "name": "1ad7a23158aa7e87017f",
         "field": {
           "Column": {
             "Expression": {
@@ -204,7 +252,7 @@
         "type": "Categorical"
       },
       {
-        "name": "ff8663c52bda60204797",
+        "name": "35594c8328886eb6e80d",
         "field": {
           "Aggregation": {
             "Expression": {

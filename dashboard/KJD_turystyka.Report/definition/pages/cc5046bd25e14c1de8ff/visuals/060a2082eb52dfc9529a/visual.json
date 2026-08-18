@@ -4,10 +4,10 @@
   "position": {
     "x": 237.32522796352583,
     "y": 264.55927051671733,
-    "z": 11000,
+    "z": 10000,
     "height": 160.48632218844986,
     "width": 402.67477203647417,
-    "tabOrder": 11000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "lineChart",
@@ -90,6 +90,19 @@
             }
           }
         }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Długość noclegu'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -112,7 +125,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "6a69bc980e40928dd023",
+        "name": "b75a17d7a242c123ce0c",
         "field": {
           "Column": {
             "Expression": {
@@ -126,7 +139,7 @@
         "type": "Advanced"
       },
       {
-        "name": "a2f19d9059d45000091b",
+        "name": "ec2ce8fd823dacde34b1",
         "field": {
           "Measure": {
             "Expression": {

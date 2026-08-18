@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d8b83d18cd9d965008e2",
   "position": {
-    "x": 1086.6869300911853,
-    "y": 322.91793313069911,
+    "x": 1087.4164133738602,
+    "y": 347.2340425531915,
     "z": 11000,
     "height": 117.68996960486322,
     "width": 192.58358662613983,
@@ -28,7 +28,7 @@
               },
               "queryRef": "DANE_Wielkopolska.Przyrost_YoY",
               "nativeQueryRef": "Przyrost_YoY",
-              "format": "0.00%;-0.00%;0.00%"
+              "format": "0.0%;-0.0%;0.0%"
             }
           ]
         }
@@ -226,7 +226,7 @@
         "howCreated": "User"
       },
       {
-        "name": "40d43d18344377578426",
+        "name": "bf59c507486141403ce3",
         "field": {
           "Measure": {
             "Expression": {

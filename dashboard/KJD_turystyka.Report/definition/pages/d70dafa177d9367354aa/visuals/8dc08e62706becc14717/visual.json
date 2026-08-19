@@ -1,0 +1,243 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "8dc08e62706becc14717",
+  "position": {
+    "x": 228.57142857142858,
+    "y": 67.112462006079028,
+    "z": 16001,
+    "height": 652.64437689969611,
+    "width": 1016.4133738601824,
+    "tabOrder": 16001
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Źródła danych",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ":",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "GUS: bdl.stat.gov.pl ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Metodologia",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ": ",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Źródłem danych są obiekty noclegowe posiadające 10 lub więcej miejsc noclegowych. Informacje pozyskiwane są za pośrednictwem sprawozdań KT-1. Od 2016 roku dla podmiotów, które odmówiły udziału w badaniu wdrożono system imputacji danych.",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "dane dotyczące liczby obiektów i miejsc noclegowych obejmują wszystkie obiekty czynne w dniu 31 lipca oraz obiekty nieczynne w tym dniu, ale czynne w innych dniach badanego miesiąca; przyjęto dla nich maksymalną liczbę miejsc;",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "korzystający z noclegów to liczba osób (turystów), które rozpoczęły pobyt w obiekcie w danym miesiącu i powinny być liczone jeden raz, tj. w miesiącu przybycia do obiektu;",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "liczba udzielonych noclegów to iloczyn osób (turystów) i liczby nocy ich pobytu;",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Informacja za Turystyka w 2025 r., Data publikacji: 30.06.2026r. : https://stat.gov.pl/obszary-tematyczne/kultura-turystyka-sport/turystyka/turystyka-w-2025-r-,1,23.html ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Mierniki",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ":",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Średni roczny przyrost",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": " - obliczany metodą regresji liniowej, jest to nachylenie prostej regresji liniowej",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "YoY ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": "- Wzrost rok od roku - w dashboardzie bierze pod uwagę ostatni i przedostatni rok z przedziału",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "CAGR",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": " - Skumulowany roczny wskaźnik wzrostu, ",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Usunięty z obecnej wersji dashbordu, ze względu na nieliniowość wykresów, CAGR bierze pod uwagę jedynie rok rozpoczęcia i zakończenia, ignorując wszystko po drodze",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

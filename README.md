@@ -38,9 +38,6 @@ Pytania:
 To do:
     - Poprawki:   
         
-        - Turyści zagraniczni w wlkp. vs Polskac - rozbić YoY i CAGR na dwa osobne
-        - Ogólny - domyślnie zaznaczone Turyści lub noclegi
-        
         - heat mapa - usunąć Poznań
             - mapa azuer - tytuł
             - mapa azuere - co się pojawia na mapie? Czy turyści czy noclegi? Opisać i zrobić żeby nie znikało jak się przeklika turystów
@@ -50,6 +47,9 @@ To do:
         - Dodałem metodologię
         - Poprawiłem Opisy, tytuły, usunąłem zbędne opisy osi
         - Zmieniłem CAGR na średni wzrost wg linii trendu (zostawiam dla prezentacji, choć docelowo wróciłbym do CAGR)
+        - W turystach Polska vs Wlkp - zostawiłem wybór jednorotny - albo turyści albo noclegi, tytuły zmieniają się adfekwatnie,
+        Dodatkowo zostawiłem kolor tylko dla Wielkopolski
+        - Wpływ wojny w Ukrainie - rozszerzyłem czas żeby pokazać że Ruskie i tak spadali jeśli chodzi o liczby, dodałem punkt wybuchu wojny
 
     - Pytania:
         - czy na stronach turyści i noclegi zostawić slicer? osobiście nie lubię jak skaczą filtry, ale z drugiej strony są niepotrzebne
@@ -62,7 +62,10 @@ To do:
         - metodologia
             - Opisać YoY i CAGR 
         - Zastanowić się nad CAGR
-         
+        - Turyści zagraniczni w wlkp. vs Polskac - rozbić YoY i CAGR na dwa osobne
+        - Ogólny - domyślnie zaznaczone Turyści lub noclegi
+        -
+
     - anulowane 
         - miara: miejsce noclegowe per zagraniczny turysta
         - Jedne dane, dodaj podział na województwa

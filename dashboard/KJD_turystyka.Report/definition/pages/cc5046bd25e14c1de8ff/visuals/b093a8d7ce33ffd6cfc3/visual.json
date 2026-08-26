@@ -231,20 +231,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "9ede28cadddd66e0f280",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Przyrost_YoY"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

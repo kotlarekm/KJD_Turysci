@@ -335,20 +335,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "d9a33e8ba2238f04886f",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Regresja_Slope"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

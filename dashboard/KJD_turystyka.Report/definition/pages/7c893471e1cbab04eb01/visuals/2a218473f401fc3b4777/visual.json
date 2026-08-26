@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "2a218473f401fc3b4777",
   "position": {
-    "x": 568.02431610942256,
+    "x": 573.86018237082067,
     "y": 67.112462006079028,
-    "z": 20000,
+    "z": 14000,
     "height": 312.21884498480244,
     "width": 311.24620060790272,
-    "tabOrder": 20000
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -121,6 +121,20 @@
                   "Value": "false"
                 }
               }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -131,7 +145,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Suma turystów/noclegów'"
+                  "Value": "'Suma wartości'"
                 }
               }
             }
@@ -145,8 +159,13 @@
           "properties": {
             "text": {
               "expr": {
-                "Literal": {
-                  "Value": "'Turyści i noclegi w Wielkopolsce'"
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DANE_Wielkopolska"
+                    }
+                  },
+                  "Property": "Tytul_Turysci_Noclegi_Wlkp"
                 }
               }
             }
@@ -303,6 +322,39 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "f10b9f83ba90e5cd52d8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Turyści/Noclegi - etykieta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b614b1792605a8e5427c",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DANE_Wielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "3f0a567e70f36839cb3c",
   "position": {
     "x": 1077.6899696048633,
-    "y": 352.09726443769006,
-    "z": 18000,
+    "y": 276.23100303951367,
+    "z": 13000,
     "height": 117.68996960486322,
     "width": 192.58358662613983,
-    "tabOrder": 18000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -158,8 +158,13 @@
             },
             "text": {
               "expr": {
-                "Literal": {
-                  "Value": "'Przyrost YoY Turyści'"
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DANE_Wielkopolska"
+                    }
+                  },
+                  "Property": "Tytul_Turysci_Noclegi_YoY"
                 }
               }
             }
@@ -171,60 +176,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "a6a9e14912087f222220",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Turyści/Noclegi - etykieta"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "d",
-              "Entity": "DANE_Wielkopolska",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "Turyści/Noclegi - etykieta"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Turyści'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
       {
         "name": "ab2fc3b88e4883dad6cd",
         "field": {
@@ -278,6 +229,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "cc64b504efcb8d7e3f1a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Przyrost_YoY"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

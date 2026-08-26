@@ -399,63 +399,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "fc167be9ff4e38f76aca",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Hierarchy": "wojewodztwo Hierarchy"
-              }
-            },
-            "Level": "wojewodztwo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "fae8dc7d1746fe0f0bfd",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Hierarchy": "wojewodztwo Hierarchy"
-              }
-            },
-            "Level": "Powiat nazwa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "034aae5e81e9c65ff932",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

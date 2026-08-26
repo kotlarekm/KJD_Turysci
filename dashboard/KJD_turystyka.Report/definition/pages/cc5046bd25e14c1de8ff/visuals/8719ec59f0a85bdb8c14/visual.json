@@ -99,23 +99,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1a14e9b1b0e0c4b5a636",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Srednia dlugosc noclegu"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

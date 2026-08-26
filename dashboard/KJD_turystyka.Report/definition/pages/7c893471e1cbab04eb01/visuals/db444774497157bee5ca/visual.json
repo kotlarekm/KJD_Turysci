@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "db444774497157bee5ca",
   "position": {
     "x": 240.24316109422494,
@@ -129,51 +129,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4083232bbb675c4f4a55",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "wojewodztwo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dde51138e0b639e4f1b7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Przyrost_YoY"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f4c1ce05be65da00bd69",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "CAGR"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

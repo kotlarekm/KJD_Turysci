@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "1bc47f13a09a86b2e4d7",
   "position": {
     "x": 237.32522796352583,
-    "y": 425.04559270516717,
-    "z": 17000,
-    "height": 294.71124620060789,
+    "y": 436.71732522796356,
+    "z": 16000,
+    "height": 283.03951367781156,
     "width": 402.67477203647417,
-    "tabOrder": 17000
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "azureMap",
@@ -399,6 +399,63 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "fc167be9ff4e38f76aca",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DANE_Wielkopolska"
+                  }
+                },
+                "Hierarchy": "wojewodztwo Hierarchy"
+              }
+            },
+            "Level": "wojewodztwo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fae8dc7d1746fe0f0bfd",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DANE_Wielkopolska"
+                  }
+                },
+                "Hierarchy": "wojewodztwo Hierarchy"
+              }
+            },
+            "Level": "Powiat nazwa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "034aae5e81e9c65ff932",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DANE_Wielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

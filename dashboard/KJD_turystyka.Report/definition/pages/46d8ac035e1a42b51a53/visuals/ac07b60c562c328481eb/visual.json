@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "ac07b60c562c328481eb",
   "position": {
     "x": 237.32522796352583,
@@ -258,56 +258,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c9daa11994efdf8839b5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Rok"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fb038adc756f08a0d5fa",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Turyści/Noclegi - etykieta"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "445c53b8f25b860393b4",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

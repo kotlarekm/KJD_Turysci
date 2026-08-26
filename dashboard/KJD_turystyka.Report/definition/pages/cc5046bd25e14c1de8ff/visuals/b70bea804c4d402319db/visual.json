@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "b70bea804c4d402319db",
   "position": {
-    "x": 1087.41641337386,
-    "y": 595.258358662614,
-    "z": 15000,
-    "height": 117.68996960486322,
+    "x": 1087.4164133738602,
+    "y": 613.73860182370834,
+    "z": 14000,
+    "height": 99.209726443769,
     "width": 192.58358662613983,
-    "tabOrder": 15000
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -162,6 +162,13 @@
                   "Value": "'Przyrost YoY Noclegi'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
             }
           }
         }
@@ -224,6 +231,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "f6b43eaaf453e8cfa483",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Przyrost_YoY"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

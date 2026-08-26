@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "e665182cd69b1cb1a42d",
   "position": {
     "x": 1087.4164133738602,
@@ -224,20 +224,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "ade4dee3633241ef8be7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "CAGR"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

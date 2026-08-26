@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "8dc08e62706becc14717",
   "position": {
     "x": 228.57142857142858,
     "y": 67.112462006079028,
-    "z": 16001,
+    "z": 3000,
     "height": 652.64437689969611,
     "width": 1016.4133738601824,
-    "tabOrder": 16001
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "textbox",
@@ -120,6 +120,17 @@
               {
                 "textRuns": [
                   {
+                    "value": "Dane nie uwzględniają jednodniowych podróży bez noclegów",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
                     "value": ""
                   }
                 ]
@@ -216,17 +227,7 @@
                     }
                   },
                   {
-                    "value": " - Skumulowany roczny wskaźnik wzrostu, ",
-                    "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Usunięty z obecnej wersji dashbordu, ze względu na nieliniowość wykresów, CAGR bierze pod uwagę jedynie rok rozpoczęcia i zakończenia, ignorując wszystko po drodze",
+                    "value": " - Skumulowany roczny wskaźnik wzrostu, CAGR bierze pod uwagę jedynie rok rozpoczęcia i zakończenia,",
                     "textStyle": {
                       "fontSize": "12pt"
                     }

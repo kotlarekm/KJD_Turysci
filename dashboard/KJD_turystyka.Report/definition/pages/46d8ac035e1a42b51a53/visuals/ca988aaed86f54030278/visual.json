@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "ca988aaed86f54030278",
   "position": {
     "x": 652.64437689969611,
@@ -304,39 +304,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "2f39a5335cb4f5a05057",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Turyści/Noclegi - etykieta"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "946606c0452a57322108",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "b093a8d7ce33ffd6cfc3",
   "position": {
-    "x": 1086.6869300911853,
-    "y": 336.048632218845,
-    "z": 14000,
-    "height": 117.68996960486322,
+    "x": 1087.4164133738602,
+    "y": 347.23404255319156,
+    "z": 13000,
+    "height": 99.209726443769,
     "width": 192.58358662613983,
-    "tabOrder": 14000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -162,6 +162,13 @@
                   "Value": "'Przyrost YoY Turyści'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
             }
           }
         }
@@ -224,6 +231,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "9ede28cadddd66e0f280",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Przyrost_YoY"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

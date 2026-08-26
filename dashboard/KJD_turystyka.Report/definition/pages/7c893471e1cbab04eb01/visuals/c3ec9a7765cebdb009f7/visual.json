@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "c3ec9a7765cebdb009f7",
   "position": {
     "x": 884.3768996960473,
@@ -224,20 +224,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "5d365244ada408000ab1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Przyrost_YoY"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

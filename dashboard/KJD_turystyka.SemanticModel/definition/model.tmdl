@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_QueryOrder = ["DANE_Wielkopolska","MiejscaNoclegowe"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
 
 ref table DANE_Wielkopolska
 ref table DIM_Kategoria

@@ -48,6 +48,27 @@ table DANE_Wielkopolska
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Regresja_Slope = ```
+			
+			VAR TabelaRoczna = 
+			    SUMMARIZE(
+			        ALLSELECTED('DANE_Wielkopolska'),
+			        'DANE_Wielkopolska'[Rok],
+			        "SumaTurystow", SUM('DANE_Wielkopolska'[Wartosc])
+			    )
+			VAR TabelaStatystyk =
+			    LINESTX(
+			        TabelaRoczna,
+			        [SumaTurystow],
+			        'DANE_Wielkopolska'[Rok]
+			    )
+			RETURN
+			    MAXX(TabelaStatystyk, [Slope1])
+			```
+		lineageTag: 70008dc0-11c3-4ca1-84f1-8ccee417aaa6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Kod
 		dataType: int64
 		formatString: 0

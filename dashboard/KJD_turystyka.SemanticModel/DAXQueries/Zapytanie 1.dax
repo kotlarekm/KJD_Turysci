@@ -1,0 +1,25 @@
+// Witaj w widoku zapytań w języku DAX! Dowiedz się więcej o zapytaniach języka DAX na stronie https://aka.ms/dax-queries.
+// Kliknij prawym przyciskiem myszy tabele, kolumny lub miary w okienku danych, aby uzyskać dostęp do szybkich zapytań, lub poproś funkcję Copilot o pomoc w pisaniu w języku DAX.
+
+// Wybierz opcję „Uruchom”, aby wypróbować to przykładowe zapytanie w języku DAX.
+DEFINE
+    VAR DaneTurysci =
+        FILTER(
+            'DANE_Wielkopolska',
+                'DANE_Wielkopolska'[Turyści/Noclegi - etykieta] = "Turyści"
+            &&  'DANE_Wielkopolska'[Kraje] <> "ogółem"
+            &&  'DANE_Wielkopolska'[Nazwa.1] = "Powiat"
+            &&  'DANE_Wielkopolska'[wojewodztwo] = "Wielkopolskie"
+        )
+    VAR DaneTurysci_Rok_Wartosc =
+        SELECTCOLUMNS(
+            DaneTurysci,
+            "Rok", 'DANE_Wielkopolska'[Rok],
+            "Wartosc", 'DANE_Wielkopolska'[Wartosc])
+
+EVALUATE
+    LINESTX(
+        DaneTurysci_Rok_Wartosc,
+        [Wartosc],
+        [Rok]
+    )   

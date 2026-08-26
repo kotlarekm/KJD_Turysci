@@ -36,10 +36,48 @@ Pytania:
     - sprawdź region w którym mieszkasz!     
 
 To do:
-    - Jedne dane, dodaj podział na województwa
-        - czy miasto powiatowe czy powiat
-        - czy sąsiad Polski
-        - Kontynent
-    - Strony noclegi i turyści
-    - Strona Polska
-        - Porównanie województw - na którym miejscu jest Wlkp?
+    - Poprawki:   
+        
+        - Turyści zagraniczni w wlkp. vs Polskac - rozbić YoY i CAGR na dwa osobne
+        - Ogólny - domyślnie zaznaczone Turyści lub noclegi
+        
+        - heat mapa - usunąć Poznań
+            - mapa azuer - tytuł
+            - mapa azuere - co się pojawia na mapie? Czy turyści czy noclegi? Opisać i zrobić żeby nie znikało jak się przeklika turystów
+        - Wpływ Covid - po co mapa? 
+        
+    - Opis:
+        - Dodałem metodologię
+        - Poprawiłem Opisy, tytuły, usunąłem zbędne opisy osi
+        - Zmieniłem CAGR na średni wzrost wg linii trendu (zostawiam dla prezentacji, choć docelowo wróciłbym do CAGR)
+
+    - Pytania:
+        - czy na stronach turyści i noclegi zostawić slicer? osobiście nie lubię jak skaczą filtry, ale z drugiej strony są niepotrzebne
+        - Czy CAGR zastąpić lepiej nachyleniem linii trendu?
+        - CAGR, YoY - 1 miejsce po przecinku
+
+    - Zrobione:
+        - heat map (ze służbowego kompa)
+        - wpływ wojny w Ukrainie  - rok wybuchu wojny
+        - metodologia
+            - Opisać YoY i CAGR 
+        - Zastanowić się nad CAGR
+         
+    - anulowane 
+        - miara: miejsce noclegowe per zagraniczny turysta
+        - Jedne dane, dodaj podział na województwa
+            - czy miasto powiatowe czy powiat
+            - czy sąsiad Polski
+            - Kontynent
+        - Strony noclegi i turyści
+        - Strona Polska
+            - Porównanie województw - na którym miejscu jest Wlkp?
+
+        - Współczynniki
+            - Rolling CAGR 3-letni
+            - Volatility
+        
+        - Drill-through ?
+
+        - Porównanie z bazą noclegową?
+

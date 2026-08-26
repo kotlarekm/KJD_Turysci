@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "8719ec59f0a85bdb8c14",
   "position": {
     "x": 1087.4164133738602,
@@ -90,7 +90,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "13D"
                 }
               }
             }
@@ -103,7 +103,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "4832a0b836e4c4e00b9f",
+        "name": "1a14e9b1b0e0c4b5a636",
         "field": {
           "Measure": {
             "Expression": {

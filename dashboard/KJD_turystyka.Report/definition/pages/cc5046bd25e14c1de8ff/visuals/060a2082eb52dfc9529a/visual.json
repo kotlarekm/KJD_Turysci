@@ -1,9 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "060a2082eb52dfc9529a",
   "position": {
     "x": 237.32522796352583,
-    "y": 264.55927051671733,
+    "y": 270.3951367781155,
     "z": 10000,
     "height": 160.48632218844986,
     "width": 402.67477203647417,
@@ -121,5 +121,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8cc554ef8e4856d814a1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Rok"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "31971a66ee5ec8754ec9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Srednia dlugosc noclegu"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

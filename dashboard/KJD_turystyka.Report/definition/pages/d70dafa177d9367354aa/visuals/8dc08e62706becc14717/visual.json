@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "8dc08e62706becc14717",
   "position": {
     "x": 228.57142857142858,
@@ -228,6 +228,34 @@
                   },
                   {
                     "value": " - Skumulowany roczny wskaźnik wzrostu, CAGR bierze pod uwagę jedynie rok rozpoczęcia i zakończenia,",
+                    "textStyle": {
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Wyłączenie miasta Poznań",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "W niektórych wykresach (mapy oraz wykresie stosunku ilości noclegów turystów zagranicznych do ilości miejsc noclegowych w karcie \"Miejsca noclegowe\") wykluczyłem miasto Poznań ze względu na dużą dysproporcję między tym powiatem, a resztą.",
                     "textStyle": {
                       "fontSize": "12pt"
                     }

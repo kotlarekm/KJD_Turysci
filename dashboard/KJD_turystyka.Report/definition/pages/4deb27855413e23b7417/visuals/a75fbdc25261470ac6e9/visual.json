@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "a75fbdc25261470ac6e9",
   "position": {
     "x": 9.72644376899696,
     "y": 0,
     "z": 4000,
     "height": 59.331306990881458,
-    "width": 792.70516717325233,
+    "width": 892.887537993921,
     "tabOrder": 4000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Turyści zagraniczni w Wielkopolsce",
+                    "value": "Turyści zagraniczni w Wielkopolsce a miejsca noclegowe",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "24pt"

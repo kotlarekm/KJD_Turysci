@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "aef933cc47777719a700",
   "position": {
     "x": 9.72644376899696,
@@ -61,6 +61,13 @@
                   "Value": "'Basic'"
                 }
               }
+            },
+            "isInvertedSelectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -85,5 +92,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "863154338f6363bddcc2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Nazwa powiatu"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

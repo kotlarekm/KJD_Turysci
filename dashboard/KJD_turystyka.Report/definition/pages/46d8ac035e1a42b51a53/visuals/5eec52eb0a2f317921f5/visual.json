@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "5eec52eb0a2f317921f5",
   "position": {
-    "x": 1087.41641337386,
-    "y": 595.258358662614,
+    "x": 310.27355623100306,
+    "y": 568.99696048632222,
     "z": 13000,
-    "height": 117.68996960486322,
-    "width": 192.58358662613983,
+    "height": 128.38905775075989,
+    "width": 316.10942249240122,
     "tabOrder": 13000
   },
   "visual": {
@@ -159,7 +159,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Przyrost YoY Noclegi'"
+                  "Value": "'Zmiana  liczby noclegów w 2020 względem roku poprzedniego'"
                 }
               }
             }
@@ -214,6 +214,81 @@
                       {
                         "Literal": {
                           "Value": "'Noclegi'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "b0a44adfea008f92afc6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Przyrost_YoY"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b5c6acd36bf55572f831",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DANE_Wielkopolska"
+              }
+            },
+            "Property": "Rok"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "DANE_Wielkopolska",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "Rok"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2019L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2020L"
                         }
                       }
                     ]

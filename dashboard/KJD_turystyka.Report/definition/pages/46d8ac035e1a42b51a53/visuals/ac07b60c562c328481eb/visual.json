@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "ac07b60c562c328481eb",
   "position": {
-    "x": 237.32522796352583,
-    "y": 67.112462006079028,
+    "x": 246.07902735562311,
+    "y": 79.756838905775084,
     "z": 16000,
-    "height": 197.44680851063831,
+    "height": 302.4924012158055,
     "width": 402.67477203647417,
     "tabOrder": 16000
   },
@@ -242,7 +242,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Turyści i noclegi wg lat'"
+                  "Value": "'Turyści i noclegi w latach okołocovidowych'"
                 }
               }
             },

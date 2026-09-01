@@ -4,10 +4,10 @@
   "position": {
     "x": 310.27355623100306,
     "y": 568.99696048632222,
-    "z": 13000,
+    "z": 7000,
     "height": 128.38905775075989,
     "width": 316.10942249240122,
-    "tabOrder": 13000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -224,20 +224,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "b0a44adfea008f92afc6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Przyrost_YoY"
-          }
-        },
-        "type": "Advanced"
       },
       {
         "name": "b5c6acd36bf55572f831",

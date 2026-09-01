@@ -321,20 +321,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "946cc607b5c76834160f",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "CAGR"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

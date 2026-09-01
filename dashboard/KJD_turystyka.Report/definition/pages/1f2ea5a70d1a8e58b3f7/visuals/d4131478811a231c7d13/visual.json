@@ -99,37 +99,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b074144c7876264b7af8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Nazwa powiatu"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "54c635135bc903da7ad0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "CAGR"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

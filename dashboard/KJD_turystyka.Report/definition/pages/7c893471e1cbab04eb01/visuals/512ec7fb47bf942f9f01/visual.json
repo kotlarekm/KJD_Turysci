@@ -68,23 +68,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6673caadfd15d12ea9d0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Kraje"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

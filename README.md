@@ -11,6 +11,28 @@ lata 2016-2025
 
 Odbiorca: ogół Polaków / przeciętny „Kowalski”
 
+Plik Geojson użyty w projekcie, wg poniższej licencji:
+MIT License
+
+Copyright (c) 2019 Piotr Patrzyk
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 To Do:
 Przeczytać punkt "Synteza" z opracowania pdf z GUSu
@@ -37,12 +59,12 @@ Pytania:
 
 To do:
     - Poprawki:   
-        
-        - heat mapa - usunąć Poznań
-            - mapa azuer - tytuł
-            - mapa azuere - co się pojawia na mapie? Czy turyści czy noclegi? Opisać i zrobić żeby nie znikało jak się przeklika turystów
-        - Wpływ Covid - po co mapa? 
-        
+        - Poprawić model danych
+	    - Scalić Turystów i noclegi w jedną stronę
+	    - Opis modelu danych
+        - Opis repozytorium
+        - mapa Azure - zrobić, żeby nie znikało jak się przeklika z turystów na noclegi
+       
     - Opis:
         - Dodałem metodologię
         - Poprawiłem Opisy, tytuły, usunąłem zbędne opisy osi
@@ -64,7 +86,10 @@ To do:
         - Zastanowić się nad CAGR
         - Turyści zagraniczni w wlkp. vs Polskac - rozbić YoY i CAGR na dwa osobne
         - Ogólny - domyślnie zaznaczone Turyści lub noclegi
-        -
+        - heat mapa - usunąć Poznań
+            - mapa azuer - tytuł
+            - mapa azuere - co się pojawia na mapie? Czy turyści czy noclegi? Opisać i zrobić żeby nie znikało jak się przeklika turystów
+         - Wpływ Covid - po co mapa? 
 
     - anulowane 
         - miara: miejsce noclegowe per zagraniczny turysta

@@ -232,23 +232,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d855aa376f9b75b90cb8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "CAGR"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

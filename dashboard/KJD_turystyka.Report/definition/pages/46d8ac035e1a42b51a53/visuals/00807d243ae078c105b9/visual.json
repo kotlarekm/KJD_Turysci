@@ -4,10 +4,10 @@
   "position": {
     "x": 693.49544072948333,
     "y": 79.756838905775084,
-    "z": 18004,
+    "z": 14000,
     "height": 302.4924012158055,
     "width": 561.21580547112467,
-    "tabOrder": 18004
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -135,34 +135,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "4640c7e4a253e7109e18",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Nazwa powiatu"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4e3187c0a9857dc2c26a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
-              }
-            },
-            "Property": "Przyrost_YoY"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "b9a8f8130199127d63bb",
         "field": {

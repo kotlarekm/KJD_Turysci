@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "1bc47f13a09a86b2e4d7",
   "position": {
     "x": 237.32522796352583,
@@ -416,25 +416,6 @@
         "howCreated": "User"
       },
       {
-        "name": "8169540ee91405c3ed76",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Hierarchy": "wojewodztwo Hierarchy"
-              }
-            },
-            "Level": "wojewodztwo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "2f5e7a756cc08a6c3609",
         "field": {
           "HierarchyLevel": {
@@ -565,25 +546,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "d808a732466a0aa1eaa7",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

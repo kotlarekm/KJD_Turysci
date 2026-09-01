@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "d2a37a430716a4ebd0b3",
   "position": {
-    "x": 237.77777777777777,
-    "y": 292.22222222222223,
+    "x": 226.62613981762919,
+    "y": 279.14893617021278,
     "z": 14000,
-    "height": 207.77777777777777,
-    "width": 402.22222222222223,
+    "height": 208.14589665653497,
+    "width": 413.37386018237083,
     "tabOrder": 14000
   },
   "visual": {
@@ -224,6 +224,130 @@
           },
           "selector": {
             "id": "1"
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "DANE_Wielkopolska"
+                          }
+                        },
+                        "Property": "Kraje"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Rosja'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#009739'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "DANE_Wielkopolska"
+                          }
+                        },
+                        "Property": "Kraje"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Białoruś'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "DANE_Wielkopolska"
+                          }
+                        },
+                        "Property": "Kraje"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Rosja'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ]

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "15d0da870a66a4dda39e",
   "position": {
-    "x": 662.22222222222217,
-    "y": 292.22222222222223,
+    "x": 228.57142857142858,
+    "y": 500.9118541033435,
     "z": 16000,
-    "height": 207.77777777777777,
-    "width": 402.22222222222223,
+    "height": 208.14589665653497,
+    "width": 411.42857142857144,
     "tabOrder": 16000
   },
   "visual": {
@@ -224,6 +224,91 @@
           },
           "selector": {
             "id": "1"
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "DANE_Wielkopolska"
+                          }
+                        },
+                        "Property": "Kraje"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Rosja'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#009739'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "DANE_Wielkopolska"
+                          }
+                        },
+                        "Property": "Kraje"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Białoruś'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ]

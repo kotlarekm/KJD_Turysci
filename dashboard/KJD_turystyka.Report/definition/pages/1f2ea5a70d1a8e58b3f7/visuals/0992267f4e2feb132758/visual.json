@@ -4,7 +4,7 @@
   "position": {
     "x": 991.11111111111109,
     "y": 66.666666666666671,
-    "z": 5000,
+    "z": 11000,
     "height": 293.33333333333331,
     "width": 288.88888888888886,
     "tabOrder": 5000
@@ -199,39 +199,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "e7295644700ab3b633c6",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9298b98e62246a419b87",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Powiat"
-              }
-            },
-            "Property": "Nazwa powiatu"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

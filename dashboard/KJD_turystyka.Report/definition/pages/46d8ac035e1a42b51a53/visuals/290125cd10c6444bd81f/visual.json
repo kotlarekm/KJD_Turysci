@@ -3,10 +3,10 @@
   "name": "290125cd10c6444bd81f",
   "position": {
     "x": 9.72644376899696,
-    "y": 292.7659574468085,
+    "y": 300.54711246200611,
     "z": 2000,
-    "height": 172.15805471124619,
-    "width": 193.55623100303953,
+    "height": 180.91185410334347,
+    "width": 201.33738601823708,
     "tabOrder": 2000
   },
   "visual": {
@@ -60,6 +60,48 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Kraje'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }

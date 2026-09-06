@@ -4,7 +4,7 @@
   "position": {
     "x": 1077.6899696048633,
     "y": 129.36170212765958,
-    "z": 12000,
+    "z": 16000,
     "height": 117.68996960486322,
     "width": 192.58358662613983,
     "tabOrder": 12000
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "KPI_Measures"
                     }
                   },
                   "Property": "CAGR"
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
+                    "Entity": "KPI_Measures"
                   }
                 },
                 "Property": "CAGR"
@@ -118,7 +118,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fact_NoclegiWielkopolska"
+                                      "Entity": "KPI_Measures"
                                     }
                                   },
                                   "Property": "CAGR"
@@ -145,7 +145,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fact_NoclegiWielkopolska"
+                                      "Entity": "KPI_Measures"
                                     }
                                   },
                                   "Property": "CAGR"
@@ -220,7 +220,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "DynamicTitles_Measures"
                     }
                   },
                   "Property": "Tytul_Turysci_Noclegi_CAGR"
@@ -268,20 +268,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "2c701c6c90c2d77291f2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_NoclegiWielkopolska"
-              }
-            },
-            "Property": "CAGR"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "56137d3202398b1c26e5",
         "field": {
@@ -354,6 +340,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "6193b1c11d925dda1ba1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPI_Measures"
+              }
+            },
+            "Property": "CAGR"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

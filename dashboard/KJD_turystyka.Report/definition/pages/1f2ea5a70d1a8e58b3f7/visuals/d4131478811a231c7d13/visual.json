@@ -4,7 +4,7 @@
   "position": {
     "x": 237.77777777777777,
     "y": 411.11111111111109,
-    "z": 11000,
+    "z": 15000,
     "height": 302.22222222222223,
     "width": 487.77777777777777,
     "tabOrder": 11000
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "KPI_Measures"
                     }
                   },
                   "Property": "CAGR"
@@ -59,7 +59,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
+                    "Entity": "KPI_Measures"
                   }
                 },
                 "Property": "CAGR"
@@ -99,37 +99,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7778f08cae6f9b3a9f22",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_NoclegiWielkopolska"
-              }
-            },
-            "Property": "CAGR"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ef953a3fbed3d5254a5e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Powiat"
-              }
-            },
-            "Property": "Nazwa powiatu"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

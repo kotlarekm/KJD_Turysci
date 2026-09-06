@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "KPI_Measures"
                     }
                   },
                   "Property": "CAGR"
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
+                    "Entity": "KPI_Measures"
                   }
                 },
                 "Property": "CAGR"
@@ -86,7 +86,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fact_NoclegiWielkopolska"
+                                      "Entity": "KPI_Measures"
                                     }
                                   },
                                   "Property": "CAGR"
@@ -113,7 +113,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fact_NoclegiWielkopolska"
+                                      "Entity": "KPI_Measures"
                                     }
                                   },
                                   "Property": "CAGR"

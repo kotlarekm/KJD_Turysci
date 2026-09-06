@@ -13,10 +13,11 @@ annotation PBI_QueryOrder = ["Fact_NoclegiWielkopolska","Fact_MiejscaNoclegowe",
 annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
 
 ref table Fact_NoclegiWielkopolska
-ref table DIM_Kategoria
 ref table Fact_MiejscaNoclegowe
 ref table Dim_Powiat
 ref table Dim_Rok
+ref table KPI_Measures
+ref table DynamicTitles_Measures
 
 ref cultureInfo pl-PL
 

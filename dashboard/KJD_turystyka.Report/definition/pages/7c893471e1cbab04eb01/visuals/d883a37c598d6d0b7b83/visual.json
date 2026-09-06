@@ -4,7 +4,7 @@
   "position": {
     "x": 240.24316109422494,
     "y": 67.112462006079028,
-    "z": 0,
+    "z": 4000,
     "height": 312.21884498480244,
     "width": 311.24620060790272,
     "tabOrder": 0
@@ -169,7 +169,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "DynamicTitles_Measures"
                     }
                   },
                   "Property": "Tytul_Turysci_Noclegi_PL"
@@ -262,39 +262,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "89b67f2e9d7ce1c7d5aa",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_NoclegiWielkopolska"
-              }
-            },
-            "Property": "Turyści/Noclegi - etykieta"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "eb5f4c244ac4c7c1167d",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

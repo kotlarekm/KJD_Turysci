@@ -3,10 +3,10 @@
   "name": "aef933cc47777719a700",
   "position": {
     "x": 9.72644376899696,
-    "y": 479.02735562310028,
+    "y": 482.43161094224928,
     "z": 3000,
     "height": 179.93920972644378,
-    "width": 193.55623100303953,
+    "width": 201.33738601823708,
     "tabOrder": 3000
   },
   "visual": {
@@ -77,6 +77,48 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Nazwa Powiatu'"
                 }
               }
             }

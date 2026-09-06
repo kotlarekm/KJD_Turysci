@@ -1,0 +1,86 @@
+table KPI_Measures
+	lineageTag: 9212a099-58c8-45b8-b785-6b6fdddb1404
+
+	measure CAGR = ```
+			
+			VAR MinYear =
+			    CALCULATE(MIN(Fact_NoclegiWielkopolska[Rok]),ALLSELECTED(Fact_NoclegiWielkopolska))
+			VAR MaxYear =
+			    CALCULATE(MAX(Fact_NoclegiWielkopolska[Rok]),ALLSELECTED(Fact_NoclegiWielkopolska))
+			VAR BeginningValue = 
+			    CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]), Fact_NoclegiWielkopolska[Rok] = MinYear)
+			VAR EndingValue =
+			    CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]),Fact_NoclegiWielkopolska[Rok] = MaxYear)
+			VAR Years = MaxYear - MinYear
+			RETURN
+			IF( BeginningValue>0 && Years>0,
+			    ((EndingValue/BeginningValue)^(1/Years)-1)
+			)
+			
+			```
+		lineageTag: 655f379e-4100-4110-917c-b2b40526eb0e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Przyrost_YoY = ```
+			
+			    VAR MinYear = 
+			        CALCULATE(MIN(Fact_NoclegiWielkopolska[Rok]), ALLSELECTED(Fact_NoclegiWielkopolska))
+			    VAR MaxYear =
+			        CALCULATE(MAX(Fact_NoclegiWielkopolska[Rok]), ALLSELECTED(Fact_NoclegiWielkopolska))
+			    RETURN
+			    IF(MaxYear > MinYear,
+			        ((CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]),Fact_NoclegiWielkopolska[Rok] = MaxYear)) / (CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]),Fact_NoclegiWielkopolska[Rok] = (MaxYear-1))) -1),
+			        0)
+			```
+		lineageTag: b80e5e13-6d24-406a-be62-b27cd434e3b1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Regresja_Slope = ```
+			
+			VAR TabelaRoczna = 
+			    SUMMARIZE(
+			        ALLSELECTED('Fact_NoclegiWielkopolska'),
+			        'Fact_NoclegiWielkopolska'[Rok],
+			        "SumaTurystow", SUM('Fact_NoclegiWielkopolska'[Wartosc])
+			    )
+			VAR TabelaStatystyk =
+			    LINESTX(
+			        TabelaRoczna,
+			        [SumaTurystow],
+			        'Fact_NoclegiWielkopolska'[Rok]
+			    )
+			RETURN
+			    MAXX(TabelaStatystyk, [Slope1])
+			```
+		lineageTag: 70008dc0-11c3-4ca1-84f1-8ccee417aaa6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Srednia dlugosc noclegu' = ```
+			
+			    VAR Turysci = CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]), Fact_NoclegiWielkopolska[Turyści/Noclegi - etykieta] = "Turyści")
+			    VAR Noclegi = CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]), Fact_NoclegiWielkopolska[Turyści/Noclegi - etykieta] = "Noclegi")
+			    RETURN
+			        DIVIDE(Noclegi, Turysci)
+			```
+		lineageTag: f9c5ea08-700b-4990-bc16-aa577272e8d3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Placeholder
+		formatString: 0
+		lineageTag: b61e20aa-f41e-4cff-9cfa-965c09214bf4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Placeholder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition KPI_Measures = calculated
+		mode: import
+		source = ROW("Placeholder", BLANK())
+
+	annotation PBI_Id = 7dd0b648cd984d23a6f4bb13da6ff570
+

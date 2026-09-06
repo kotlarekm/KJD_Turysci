@@ -4,7 +4,7 @@
   "position": {
     "x": 1086.4437689969604,
     "y": 201.33738601823711,
-    "z": 18000,
+    "z": 21000,
     "height": 138.11550151975683,
     "width": 193.55623100303953,
     "tabOrder": 18000
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "KPI_Measures"
                     }
                   },
                   "Property": "Regresja_Slope"
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
+                    "Entity": "KPI_Measures"
                   }
                 },
                 "Property": "Regresja_Slope"
@@ -177,7 +177,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fact_NoclegiWielkopolska"
+                                      "Entity": "KPI_Measures"
                                     }
                                   },
                                   "Property": "Regresja_Slope"
@@ -204,7 +204,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fact_NoclegiWielkopolska"
+                                      "Entity": "KPI_Measures"
                                     }
                                   },
                                   "Property": "Regresja_Slope"
@@ -491,6 +491,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "183fdadf54d20d1dc073",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPI_Measures"
+              }
+            },
+            "Property": "Regresja_Slope"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

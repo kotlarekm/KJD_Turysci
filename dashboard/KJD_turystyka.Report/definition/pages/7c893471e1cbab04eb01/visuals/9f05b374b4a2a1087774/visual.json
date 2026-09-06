@@ -4,7 +4,7 @@
   "position": {
     "x": 959.02735562310033,
     "y": 389.05775075987845,
-    "z": 4000,
+    "z": 8000,
     "height": 323.89057750759878,
     "width": 311.24620060790272,
     "tabOrder": 4000
@@ -246,7 +246,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "DynamicTitles_Measures"
                     }
                   },
                   "Property": "Tytul_Turysci_Noclegi_Wojewodztwo"
@@ -340,39 +340,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "a89e7116b25a81a9bf78",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "bb455343dc04e6aaf7c5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Powiat"
-              }
-            },
-            "Property": "Wojewodztwo nazwa"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

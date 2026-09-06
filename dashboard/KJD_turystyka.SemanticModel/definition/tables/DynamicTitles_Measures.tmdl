@@ -1,0 +1,55 @@
+table DynamicTitles_Measures
+	lineageTag: 708b2ba1-f611-466c-a69f-4402315baae5
+
+	measure Tytul_Turysci_Noclegi_CAGR = ```
+			
+			    "CAGR " & [WyborTurysciNoclegi] 
+			```
+		lineageTag: 14359ca3-778c-4b49-b40e-665acebe04a3
+
+	measure Tytul_Turysci_Noclegi_PL = ```
+			
+			    [WyborTurysciNoclegi] & " w Polsce"
+			```
+		lineageTag: 9fc31e3e-debb-4b4b-9a48-00eda5fad332
+
+	measure Tytul_Turysci_Noclegi_Wlkp = ```
+			
+			    [WyborTurysciNoclegi] & " w Wielkopolsce"
+			```
+		lineageTag: 27504eab-d700-420a-8f8a-2773547f77b0
+
+	measure WyborTurysciNoclegi = ```
+			
+			    SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta])
+			
+			```
+		lineageTag: 21fca944-d67d-47ce-a3e1-6c99d24102bf
+
+	measure Tytul_Turysci_Noclegi_Wojewodztwo = ```
+			
+			    [WyborTurysciNoclegi] & " wg województwa"
+			```
+		lineageTag: 55031321-a802-4631-af82-d7c5396f4338
+
+	measure Tytul_Turysci_Noclegi_YoY = ```
+			
+			    "Przyrost YoY " & [WyborTurysciNoclegi] 
+			```
+		lineageTag: ac4fde3c-5979-4af7-98b5-05f4dd9372fe
+
+	column Placeholder
+		formatString: 0
+		lineageTag: 8aec1540-1e35-4356-b9a5-f28f48dc73d1
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Placeholder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DynamicTitles_Measures = calculated
+		mode: import
+		source = ROW("Placeholder", BLANK())
+
+	annotation PBI_Id = 11f4276ea7b84f399dbf485c47d3a5c3
+

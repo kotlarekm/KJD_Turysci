@@ -5,38 +5,26 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 53.881830363217205
       },
       "nodes": [
         {
           "location": {
-            "x": 244.531137453933,
-            "y": 405.93834055300471
-          },
-          "nodeIndex": "DIM_Kategoria",
-          "nodeLineageTag": "2ac56227-db5a-42c4-b109-ba1551739c2e",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 583.83150216590138,
-            "y": 0
+            "x": 183.6646842064855,
+            "y": 80.292519099452591
           },
           "nodeIndex": "Fact_NoclegiWielkopolska",
+          "nodeLineageTag": "fafda941-9cd1-4d05-87ff-16fd348617f8",
           "size": {
-            "height": 799.71550033404822,
-            "width": 234
+            "height": 505.98905693176528,
+            "width": 302.53617012719928
           },
-          "zIndex": 5
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 1655.9530153795695,
-            "y": 299.83949735937807
+            "x": 1191.5368095900953,
+            "y": 162.43350315392598
           },
           "nodeIndex": "Fact_MiejscaNoclegowe",
           "nodeLineageTag": "0191f220-29aa-43a7-820e-d25cb131d19e",
@@ -44,12 +32,12 @@
             "height": 342.39316161289673,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 1028.45897073306,
-            "y": 791.24090501519743
+            "x": 713.9651395945267,
+            "y": 617.70517843929758
           },
           "nodeIndex": "Dim_Powiat",
           "nodeLineageTag": "732bd2aa-bada-44ae-b6c7-e19f6814b22b",
@@ -57,12 +45,12 @@
             "height": 248,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 1088.387228227585,
-            "y": 68.8176289348554
+            "x": 735.59055675576849,
+            "y": 13.111681994688638
           },
           "nodeIndex": "Dim_Rok",
           "nodeLineageTag": "98a9f112-b8ca-405e-b37e-1e6a86bf9089",
@@ -70,11 +58,37 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 680.41342665049524
+          },
+          "nodeIndex": "KPI_Measures",
+          "nodeLineageTag": "9212a099-58c8-45b8-b785-6b6fdddb1404",
+          "size": {
+            "height": 275.06342442502796,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 266.09108101510822,
+            "y": 679.99404694419331
+          },
+          "nodeIndex": "DynamicTitles_Measures",
+          "nodeLineageTag": "708b2ba1-f611-466c-a69f-4402315baae5",
+          "size": {
+            "height": 276.695237999485,
+            "width": 273.16352578697115
+          },
+          "zIndex": 1
         }
       ],
       "name": "Wszystkie tabele",
-      "zoomValue": 61.281510072783931,
+      "zoomValue": 77.032129329211458,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

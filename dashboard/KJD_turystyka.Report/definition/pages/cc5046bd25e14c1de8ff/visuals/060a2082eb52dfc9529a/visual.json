@@ -4,7 +4,7 @@
   "position": {
     "x": 237.32522796352583,
     "y": 270.3951367781155,
-    "z": 10000,
+    "z": 14000,
     "height": 160.48632218844986,
     "width": 402.67477203647417,
     "tabOrder": 10000
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "KPI_Measures"
                     }
                   },
                   "Property": "Srednia dlugosc noclegu"
@@ -58,7 +58,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
+                    "Entity": "KPI_Measures"
                   }
                 },
                 "Property": "Srednia dlugosc noclegu"

@@ -4,7 +4,7 @@
   "position": {
     "x": 885.10638297872345,
     "y": 129.36170212765958,
-    "z": 10000,
+    "z": 14000,
     "height": 117.68996960486322,
     "width": 192.58358662613983,
     "tabOrder": 10000
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "KPI_Measures"
                     }
                   },
                   "Property": "CAGR"
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
+                    "Entity": "KPI_Measures"
                   }
                 },
                 "Property": "CAGR"
@@ -118,7 +118,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fact_NoclegiWielkopolska"
+                                      "Entity": "KPI_Measures"
                                     }
                                   },
                                   "Property": "CAGR"
@@ -145,7 +145,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fact_NoclegiWielkopolska"
+                                      "Entity": "KPI_Measures"
                                     }
                                   },
                                   "Property": "CAGR"
@@ -220,7 +220,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "DynamicTitles_Measures"
                     }
                   },
                   "Property": "Tytul_Turysci_Noclegi_CAGR"
@@ -232,5 +232,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c5fc9143c8af43d35c96",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPI_Measures"
+              }
+            },
+            "Property": "CAGR"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

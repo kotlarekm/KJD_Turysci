@@ -4,7 +4,7 @@
   "position": {
     "x": 1087.4164133738602,
     "y": 347.23404255319156,
-    "z": 13000,
+    "z": 16000,
     "height": 99.209726443769,
     "width": 192.58358662613983,
     "tabOrder": 13000
@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "KPI_Measures"
                     }
                   },
                   "Property": "Przyrost_YoY"
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
+                    "Entity": "KPI_Measures"
                   }
                 },
                 "Property": "Przyrost_YoY"
@@ -86,7 +86,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fact_NoclegiWielkopolska"
+                                      "Entity": "KPI_Measures"
                                     }
                                   },
                                   "Property": "Przyrost_YoY"
@@ -113,7 +113,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fact_NoclegiWielkopolska"
+                                      "Entity": "KPI_Measures"
                                     }
                                   },
                                   "Property": "Przyrost_YoY"
@@ -231,6 +231,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "d5b9cdbadaa20ebbd672",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPI_Measures"
+              }
+            },
+            "Property": "Przyrost_YoY"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

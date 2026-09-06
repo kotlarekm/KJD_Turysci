@@ -4,7 +4,7 @@
   "position": {
     "x": 9.72644376899696,
     "y": 79.756838905775084,
-    "z": 2000,
+    "z": 0,
     "height": 99.209726443769,
     "width": 201.33738601823708,
     "tabOrder": 2000
@@ -55,23 +55,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9930bf88a1d8f84fedbf",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Rok"
-              }
-            },
-            "Property": "Rok"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

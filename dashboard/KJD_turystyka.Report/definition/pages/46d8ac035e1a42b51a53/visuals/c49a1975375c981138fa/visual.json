@@ -3,10 +3,10 @@
   "name": "c49a1975375c981138fa",
   "position": {
     "x": 9.72644376899696,
-    "y": 193.55623100303953,
+    "y": 199.39209726443769,
     "z": 5000,
     "height": 99.209726443769,
-    "width": 193.55623100303953,
+    "width": 201.33738601823708,
     "tabOrder": 5000
   },
   "visual": {
@@ -62,6 +62,13 @@
                   "Value": "'Turyści/Noclegi'"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -74,7 +81,21 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Turyści/Noclegi'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -83,5 +104,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8b38b0b7679c67f1c821",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_NoclegiWielkopolska"
+              }
+            },
+            "Property": "Turyści/Noclegi - etykieta"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -4,7 +4,7 @@
   "position": {
     "x": 240.24316109422494,
     "y": 389.05775075987845,
-    "z": 15000,
+    "z": 19000,
     "height": 323.89057750759878,
     "width": 309.30091185410333,
     "tabOrder": 15000
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_NoclegiWielkopolska"
+                      "Entity": "KPI_Measures"
                     }
                   },
                   "Property": "Przyrost_YoY"
@@ -59,7 +59,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
+                    "Entity": "KPI_Measures"
                   }
                 },
                 "Property": "Przyrost_YoY"
@@ -267,7 +267,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Fact_NoclegiWielkopolska"
+                "Entity": "KPI_Measures"
               }
             },
             "Property": "Przyrost_YoY"

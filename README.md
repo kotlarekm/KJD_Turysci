@@ -59,11 +59,11 @@ Pytania:
 
 To do:
     - Poprawki:   
-        - Poprawić model danych
+        - mapa Azure - zrobić, żeby nie znikało jak się przeklika z turystów na noclegi
 	    - Scalić Turystów i noclegi w jedną stronę
+        - Usunąć tytuły osi tam gdzie niepotrzbne - opisać je w tytule wykresu
 	    - Opis modelu danych
         - Opis repozytorium
-        - mapa Azure - zrobić, żeby nie znikało jak się przeklika z turystów na noclegi
        
     - Opis:
         - Dodałem metodologię
@@ -90,6 +90,9 @@ To do:
             - mapa azuer - tytuł
             - mapa azuere - co się pojawia na mapie? Czy turyści czy noclegi? Opisać i zrobić żeby nie znikało jak się przeklika turystów
          - Wpływ Covid - po co mapa? 
+        - Slicer Rok - wielkość czcionki
+        - Poprawić model danych
+        - KPI_Measures
 
     - anulowane 
         - miara: miejsce noclegowe per zagraniczny turysta

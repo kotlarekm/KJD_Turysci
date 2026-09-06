@@ -297,20 +297,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "16b44fccb0131173f7f3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "KPI_Measures"
-              }
-            },
-            "Property": "CAGR"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

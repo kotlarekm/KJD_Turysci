@@ -16,7 +16,7 @@
           "nodeIndex": "Fact_NoclegiWielkopolska",
           "nodeLineageTag": "fafda941-9cd1-4d05-87ff-16fd348617f8",
           "size": {
-            "height": 505.98905693176528,
+            "height": 482.62218371049732,
             "width": 302.53617012719928
           },
           "zIndex": 3
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 713.9651395945267,
-            "y": 617.70517843929758
+            "y": 543.71007990528244
           },
           "nodeIndex": "Dim_Powiat",
           "nodeLineageTag": "732bd2aa-bada-44ae-b6c7-e19f6814b22b",
@@ -49,8 +49,8 @@
         },
         {
           "location": {
-            "x": 735.59055675576849,
-            "y": 13.111681994688638
+            "x": 718.71448165151946,
+            "y": 58.547268813820743
           },
           "nodeIndex": "Dim_Rok",
           "nodeLineageTag": "98a9f112-b8ca-405e-b37e-1e6a86bf9089",
@@ -62,8 +62,8 @@
         },
         {
           "location": {
-            "x": 0,
-            "y": 680.41342665049524
+            "x": 58.417183053169836,
+            "y": 614.20728585690267
           },
           "nodeIndex": "KPI_Measures",
           "nodeLineageTag": "9212a099-58c8-45b8-b785-6b6fdddb1404",
@@ -75,8 +75,8 @@
         },
         {
           "location": {
-            "x": 266.09108101510822,
-            "y": 679.99404694419331
+            "x": 338.7880199257196,
+            "y": 616.38422539740839
           },
           "nodeIndex": "DynamicTitles_Measures",
           "nodeLineageTag": "708b2ba1-f611-466c-a69f-4402315baae5",

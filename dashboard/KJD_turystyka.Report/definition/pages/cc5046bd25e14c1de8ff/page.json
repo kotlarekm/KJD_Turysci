@@ -201,5 +201,32 @@
     "name": "623b2ab24c8d2c795fb4",
     "type": "Default",
     "parameters": []
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "8fc23f66fce3d56e6f32",
+      "target": "5714e9e75e3da58b2495",
+      "type": "NoFilter"
+    },
+    {
+      "source": "8fc23f66fce3d56e6f32",
+      "target": "6fbc75f1d235056f3d55",
+      "type": "NoFilter"
+    },
+    {
+      "source": "8fc23f66fce3d56e6f32",
+      "target": "1d1f8d6203e87efa8733",
+      "type": "NoFilter"
+    },
+    {
+      "source": "8fc23f66fce3d56e6f32",
+      "target": "b70bea804c4d402319db",
+      "type": "NoFilter"
+    },
+    {
+      "source": "8fc23f66fce3d56e6f32",
+      "target": "b093a8d7ce33ffd6cfc3",
+      "type": "NoFilter"
+    }
+  ]
 }

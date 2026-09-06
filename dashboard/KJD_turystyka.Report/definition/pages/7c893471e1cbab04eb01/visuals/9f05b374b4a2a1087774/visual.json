@@ -354,39 +354,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "1ad5308c7605662f84dd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Powiat"
-              }
-            },
-            "Property": "Wojewodztwo nazwa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b98e06ccf7adab1d0a94",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_NoclegiWielkopolska"
-                  }
-                },
-                "Property": "Wartosc"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -60,6 +60,11 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
       ]
     },
     "visualContainerObjects": {
@@ -131,5 +136,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "34f46a99cf619eb2f55a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Rok"
+              }
+            },
+            "Property": "Rok"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

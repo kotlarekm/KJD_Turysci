@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Noclegi'"
+                                "Value": "'Turyści'"
                               }
                             }
                           ]
@@ -163,7 +163,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "d488956e1e9cfd15d9c9",
+        "name": "1c5a642857867617366d",
         "field": {
           "Column": {
             "Expression": {

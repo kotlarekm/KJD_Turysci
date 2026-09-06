@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "1bc47f13a09a86b2e4d7",
+  "name": "5714e9e75e3da58b2495",
   "position": {
-    "x": 237.32522796352583,
-    "y": 436.71732522796356,
-    "z": 19000,
-    "height": 283.03951367781156,
-    "width": 402.67477203647417,
-    "tabOrder": 11000
+    "x": 283.12867956265768,
+    "y": 80.740117746005041,
+    "z": 22001,
+    "height": 632.21884498480244,
+    "width": 518.419452887538,
+    "tabOrder": 18001
   },
   "visual": {
     "visualType": "azureMap",
@@ -15,26 +15,6 @@
       "queryState": {
         "Category": {
           "projections": [
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_NoclegiWielkopolska"
-                        }
-                      },
-                      "Hierarchy": "wojewodztwo Hierarchy"
-                    }
-                  },
-                  "Level": "Wojewodztwo nazwa"
-                }
-              },
-              "queryRef": "DANE_Wielkopolska.wojewodztwo Hierarchy.wojewodztwo",
-              "nativeQueryRef": "wojewodztwo Hierarchy wojewodztwo",
-              "active": false
-            },
             {
               "field": {
                 "HierarchyLevel": {
@@ -76,7 +56,8 @@
                 }
               },
               "queryRef": "Sum(DANE_Wielkopolska.Wartosc)",
-              "nativeQueryRef": "Sum of Wartosc"
+              "nativeQueryRef": "Sum of Wartosc",
+              "format": "0"
             }
           ]
         }
@@ -89,21 +70,21 @@
             "zoom": {
               "expr": {
                 "Literal": {
-                  "Value": "5.37D"
+                  "Value": "6.31D"
                 }
               }
             },
             "centerLatitude": {
               "expr": {
                 "Literal": {
-                  "Value": "52.44848205006939D"
+                  "Value": "52.208503840313526D"
                 }
               }
             },
             "centerLongitude": {
               "expr": {
                 "Literal": {
-                  "Value": "17.39387960845255D"
+                  "Value": "17.33970733547951D"
                 }
               }
             },
@@ -355,6 +336,19 @@
             }
           }
         }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "showValuesInBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -546,6 +540,25 @@
             }
           ]
         }
+      },
+      {
+        "name": "88a535fc1eac99114b0d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_NoclegiWielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

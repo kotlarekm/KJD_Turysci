@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "1d1f8d6203e87efa8733",
   "position": {
-    "x": 1086.4437689969604,
-    "y": 454.22492401215817,
+    "x": 1058.2370820668693,
+    "y": 77.81155015197568,
     "z": 22000,
     "height": 151.73252279635258,
-    "width": 193.55623100303953,
+    "width": 201.33738601823708,
     "tabOrder": 14000
   },
   "visual": {
@@ -335,6 +335,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "777a4ddf2c3540cb6b54",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPI_Measures"
+              }
+            },
+            "Property": "Regresja_Slope"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

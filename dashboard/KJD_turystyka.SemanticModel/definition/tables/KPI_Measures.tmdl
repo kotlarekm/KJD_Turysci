@@ -69,6 +69,31 @@ table KPI_Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure SumaZaznaczonych = ```
+			
+			 VAR SelectedCategory = SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta])
+			 VAR Noclegi = 
+			 CALCULATE(
+			    SUM(Fact_MiejscaNoclegowe[Wartosc]),
+			    Fact_NoclegiWielkopolska[Turyści zagraniczni/Noclegi] = "Noclegi")
+			
+			VAR Turysci =
+			 CALCULATE(
+			    SUM(Fact_MiejscaNoclegowe[Wartosc]),
+			    Fact_NoclegiWielkopolska[Turyści zagraniczni/Noclegi] = "Turyści")
+			
+			RETURN SUMX(
+			    {1},
+			    SWITCH(
+			    TRUE(),
+			    SelectedCategory = "Noclegi", Noclegi,
+			    SelectedCategory = "Turyści", Turysci,
+			    Noclegi
+			    ))
+			```
+		formatString: 0
+		lineageTag: 85223710-7286-4a24-a03e-6af4a9fa1045
+
 	column Placeholder
 		formatString: 0
 		lineageTag: b61e20aa-f41e-4cff-9cfa-965c09214bf4

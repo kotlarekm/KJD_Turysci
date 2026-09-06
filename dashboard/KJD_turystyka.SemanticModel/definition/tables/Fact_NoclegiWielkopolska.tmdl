@@ -1,0 +1,246 @@
+table Fact_NoclegiWielkopolska
+	lineageTag: fafda941-9cd1-4d05-87ff-16fd348617f8
+
+	measure 'Srednia dlugosc noclegu' = ```
+			
+			    VAR Turysci = CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]), Fact_NoclegiWielkopolska[Turyści zagraniczni/Noclegi] = "turyści zagraniczni (nierezydenci)")
+			    VAR Noclegi = CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]), Fact_NoclegiWielkopolska[Turyści zagraniczni/Noclegi] = "udzielone noclegi turystom zagranicznym (nierezydentom)")
+			    RETURN
+			        DIVIDE(Noclegi, Turysci)
+			```
+		lineageTag: f9c5ea08-700b-4990-bc16-aa577272e8d3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure CAGR = ```
+			
+			VAR MinYear =
+			    CALCULATE(MIN(Fact_NoclegiWielkopolska[Rok]),ALLSELECTED(Fact_NoclegiWielkopolska))
+			VAR MaxYear =
+			    CALCULATE(MAX(Fact_NoclegiWielkopolska[Rok]),ALLSELECTED(Fact_NoclegiWielkopolska))
+			VAR BeginningValue = 
+			    CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]), Fact_NoclegiWielkopolska[Rok] = MinYear)
+			VAR EndingValue =
+			    CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]),Fact_NoclegiWielkopolska[Rok] = MaxYear)
+			VAR Years = MaxYear - MinYear
+			RETURN
+			IF( BeginningValue>0 && Years>0,
+			    ((EndingValue/BeginningValue)^(1/Years)-1)
+			)
+			
+			```
+		lineageTag: 655f379e-4100-4110-917c-b2b40526eb0e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Przyrost_YoY = ```
+			
+			    VAR MinYear = 
+			        CALCULATE(MIN(Fact_NoclegiWielkopolska[Rok]), ALLSELECTED(Fact_NoclegiWielkopolska))
+			    VAR MaxYear =
+			        CALCULATE(MAX(Fact_NoclegiWielkopolska[Rok]), ALLSELECTED(Fact_NoclegiWielkopolska))
+			    RETURN
+			    IF(MaxYear > MinYear,
+			        ((CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]),Fact_NoclegiWielkopolska[Rok] = MaxYear)) / (CALCULATE(SUM(Fact_NoclegiWielkopolska[Wartosc]),Fact_NoclegiWielkopolska[Rok] = (MaxYear-1))) -1),
+			        0)
+			```
+		lineageTag: b80e5e13-6d24-406a-be62-b27cd434e3b1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Regresja_Slope = ```
+			
+			VAR TabelaRoczna = 
+			    SUMMARIZE(
+			        ALLSELECTED('Fact_NoclegiWielkopolska'),
+			        'Fact_NoclegiWielkopolska'[Rok],
+			        "SumaTurystow", SUM('Fact_NoclegiWielkopolska'[Wartosc])
+			    )
+			VAR TabelaStatystyk =
+			    LINESTX(
+			        TabelaRoczna,
+			        [SumaTurystow],
+			        'Fact_NoclegiWielkopolska'[Rok]
+			    )
+			RETURN
+			    MAXX(TabelaStatystyk, [Slope1])
+			```
+		lineageTag: 70008dc0-11c3-4ca1-84f1-8ccee417aaa6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Tytul_Turysci_Noclegi_PL = ```
+			
+			    [WyborTurysciNoclegi] & " w Polsce"
+			```
+		lineageTag: 9fc31e3e-debb-4b4b-9a48-00eda5fad332
+
+	measure WyborTurysciNoclegi = ```
+			
+			    SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta])
+			
+			```
+		lineageTag: 21fca944-d67d-47ce-a3e1-6c99d24102bf
+
+	measure Tytul_Turysci_Noclegi_Wlkp = ```
+			
+			    [WyborTurysciNoclegi] & " w Wielkopolsce"
+			```
+		lineageTag: 27504eab-d700-420a-8f8a-2773547f77b0
+
+	measure Tytul_Turysci_Noclegi_Wojewodztwo = ```
+			
+			    [WyborTurysciNoclegi] & " wg województwa"
+			```
+		lineageTag: 55031321-a802-4631-af82-d7c5396f4338
+
+	measure Tytul_Turysci_Noclegi_CAGR = ```
+			
+			    "CAGR " & [WyborTurysciNoclegi] 
+			```
+		lineageTag: 14359ca3-778c-4b49-b40e-665acebe04a3
+
+	measure Tytul_Turysci_Noclegi_YoY = ```
+			
+			    "Przyrost YoY " & [WyborTurysciNoclegi] 
+			```
+		lineageTag: ac4fde3c-5979-4af7-98b5-05f4dd9372fe
+
+	column 'Kod Teryt'
+		dataType: int64
+		formatString: 0
+		lineageTag: ca7080be-a3b1-496c-8072-89e969ca17e9
+		summarizeBy: none
+		sourceColumn: Kod Teryt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Turyści zagraniczni/Noclegi'
+		dataType: string
+		lineageTag: b9c9deff-667c-45e1-a77a-f0535845235c
+		summarizeBy: none
+		sourceColumn: Turyści zagraniczni/Noclegi
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kraje
+		dataType: string
+		lineageTag: 7d1482da-7327-431c-af1d-001399e112be
+		summarizeBy: none
+		sourceColumn: Kraje
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rok
+		dataType: int64
+		formatString: 0
+		lineageTag: 6eecb1a3-bed3-44f9-ae6a-d82c86935cf4
+		summarizeBy: sum
+		sourceColumn: Rok
+
+		annotation SummarizationSetBy = Automatic
+
+	column Wartosc
+		dataType: int64
+		formatString: 0
+		lineageTag: 78d4a15c-c8ee-4052-b632-ba2b6d28e0d8
+		summarizeBy: sum
+		sourceColumn: Wartosc
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Turyści/Noclegi - etykieta'
+		dataType: string
+		lineageTag: acaa00e2-8e05-4593-a202-cbd6868d1d04
+		summarizeBy: none
+		sourceColumn: Turyści/Noclegi - etykieta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Typ wiersza'
+		dataType: string
+		lineageTag: 3ebb739b-d103-4bcc-b4c3-d7434ffb56a7
+		summarizeBy: none
+		sourceColumn: Typ wiersza
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nazwa powiatu'
+		dataType: string
+		lineageTag: 185b6f5e-0f17-40fa-bfdc-20b6a6df09dc
+		summarizeBy: none
+		sourceColumn: Nazwa powiatu
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teryt województwo'
+		dataType: string
+		lineageTag: 9346e17c-53c5-42ad-8b2b-ad1aab190484
+		summarizeBy: none
+		sourceColumn: Teryt województwo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teryt powiat'
+		dataType: string
+		lineageTag: 0380c76f-137a-4cae-996a-b04dd63f6e14
+		summarizeBy: none
+		sourceColumn: Teryt powiat
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teryt gmina'
+		dataType: string
+		lineageTag: f74aa2fc-e429-4fc2-a733-43387dba5a15
+		summarizeBy: none
+		sourceColumn: Teryt gmina
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teryt rodzaj'
+		dataType: string
+		lineageTag: 71bb342b-4d57-48d5-bb7b-ccc385328587
+		summarizeBy: none
+		sourceColumn: Teryt rodzaj
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Powiat nazwa'
+		dataType: string
+		lineageTag: 5f201d1a-3cf0-48e0-b113-a515a1a99bb7
+		summarizeBy: none
+		sourceColumn: Powiat nazwa
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'wojewodztwo Hierarchy'
+		lineageTag: 63df2368-28d2-4af4-b07f-dde953c31996
+
+		level 'Powiat nazwa'
+			lineageTag: e2ba185c-4679-40e6-8a14-f90e82a6c133
+			column: 'Powiat nazwa'
+
+	partition Fact_NoclegiWielkopolska = m
+		mode: import
+		source =
+				let
+				    Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\KJD_Turysci\KJD_Turysci\data\1_TurysciZagraniczniWgKrajow_2016-2025_WojewodztwaPowiaty_DLUGIE_mod.xlsx"), null, true),
+				    DANE_Sheet = Źródło{[Item = "Sheet1", Kind = "Sheet"]}[Data],
+				    #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(DANE_Sheet, [PromoteAllScalars=true]),
+				    #"Zmieniono typ" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie",{{"Kod", Int64.Type}, {"Nazwa", type text}, {"Turyści zagraniczni/Noclegi", type text}, {"Kraje", type text}, {"Rok", Int64.Type}, {"Wartosc", Int64.Type}, {"Jednostka miary", type text}, {"Atrybut", type text}}),
+				    #"Usunięto kolumny" = Table.RemoveColumns(#"Zmieniono typ",{"Jednostka miary", "Atrybut","Column1"}),
+				    #"Podzielono kolumnę według ogranicznika1" = Table.SplitColumn(#"Usunięto kolumny", "Nazwa", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Nazwa.1", "Nazwa.2"}),
+				    #"Zmieniono typ1" = Table.TransformColumnTypes(#"Podzielono kolumnę według ogranicznika1",{{"Nazwa.1", type text}, {"Nazwa.2", type text}}),
+				    #"Zmieniono nazwy kolumn" = Table.RenameColumns(#"Zmieniono typ1",{{"Nazwa.2", "Nazwa powiatu"}}),
+				    #"Dodano kolumnę warunkową" = Table.AddColumn(#"Zmieniono nazwy kolumn", "Turyści/Noclegi - etykieta", each if Text.Contains([#"Turyści zagraniczni/Noclegi"], "turyści zagraniczni") then "Turyści" else if Text.Contains([#"Turyści zagraniczni/Noclegi"], "udzielone noclegi") then "Noclegi" else null),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Dodano kolumnę warunkową",{{"wojewodztwo", type text}, {"Nazwa powiatu", type text}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Powiat nazwa", each Text.Lower("powiat " & Text.Replace([Nazwa powiatu], "m. ","") )),
+				    #"Zmieniono nazwy kolumn1" = Table.RenameColumns(#"Added Custom",{{"Kod", "Kod Teryt"}, {"Nazwa.1", "Typ wiersza"}, {"woj", "Teryt województwo"}, {"pow", "Teryt powiat"}, {"gm", "Teryt gmina"}, {"rodzaj", "Teryt rodzaj"}, {"wojewodztwo", "Wojewodztwo nazwa"}}),
+				    #"Usunięto kolumny1" = Table.RemoveColumns(#"Zmieniono nazwy kolumn1",{"Wojewodztwo nazwa"})
+				in
+				    #"Usunięto kolumny1"
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Table
+

@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Dim_Powiat"
                     }
                   },
                   "Property": "Nazwa powiatu"
                 }
               },
-              "queryRef": "DANE_Wielkopolska.Nazwa powiatu",
+              "queryRef": "DIM_Powiat.Nazwa powiatu",
               "nativeQueryRef": "Nazwa powiatu",
               "active": true
             }
@@ -39,7 +39,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "CAGR"
@@ -59,7 +59,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
+                    "Entity": "Fact_NoclegiWielkopolska"
                   }
                 },
                 "Property": "CAGR"
@@ -99,5 +99,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7778f08cae6f9b3a9f22",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_NoclegiWielkopolska"
+              }
+            },
+            "Property": "CAGR"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ef953a3fbed3d5254a5e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Powiat"
+              }
+            },
+            "Property": "Nazwa powiatu"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

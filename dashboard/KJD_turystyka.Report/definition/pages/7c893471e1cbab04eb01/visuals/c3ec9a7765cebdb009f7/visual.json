@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Przyrost_YoY"
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
+                    "Entity": "Fact_NoclegiWielkopolska"
                   }
                 },
                 "Property": "Przyrost_YoY"
@@ -86,7 +86,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "DANE_Wielkopolska"
+                                      "Entity": "Fact_NoclegiWielkopolska"
                                     }
                                   },
                                   "Property": "Przyrost_YoY"
@@ -113,7 +113,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "DANE_Wielkopolska"
+                                      "Entity": "Fact_NoclegiWielkopolska"
                                     }
                                   },
                                   "Property": "Przyrost_YoY"
@@ -161,7 +161,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Tytul_Turysci_Noclegi_YoY"
@@ -173,5 +173,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "16813817e4f3e75f0c66",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_NoclegiWielkopolska"
+              }
+            },
+            "Property": "Przyrost_YoY"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

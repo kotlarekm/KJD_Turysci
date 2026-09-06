@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "MiejscaNoclegowe"
+                      "Entity": "Fact_MiejscaNoclegowe"
                     }
                   },
                   "Property": "Rok"
@@ -39,7 +39,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "MiejscaNoclegowe"
+                      "Entity": "Fact_MiejscaNoclegowe"
                     }
                   },
                   "Property": "Obiekty, miejsca i pokoje"
@@ -59,7 +59,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "MiejscaNoclegowe"
+                          "Entity": "Fact_MiejscaNoclegowe"
                         }
                       },
                       "Property": "Wartosc"
@@ -83,7 +83,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "MiejscaNoclegowe"
+                        "Entity": "Fact_MiejscaNoclegowe"
                       }
                     },
                     "Property": "Wartosc"
@@ -213,7 +213,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "MiejscaNoclegowe"
+                "Entity": "Fact_MiejscaNoclegowe"
               }
             },
             "Property": "Obiekty, miejsca i pokoje"
@@ -225,7 +225,7 @@
           "From": [
             {
               "Name": "m",
-              "Entity": "MiejscaNoclegowe",
+              "Entity": "Fact_MiejscaNoclegowe",
               "Type": 0
             }
           ],

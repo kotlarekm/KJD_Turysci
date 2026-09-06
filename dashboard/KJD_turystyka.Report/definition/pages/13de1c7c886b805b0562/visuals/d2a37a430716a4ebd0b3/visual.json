@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Rok"
@@ -39,7 +39,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Kraje"
@@ -59,7 +59,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DANE_Wielkopolska"
+                          "Entity": "Fact_NoclegiWielkopolska"
                         }
                       },
                       "Property": "Wartosc"
@@ -83,7 +83,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "DANE_Wielkopolska"
+                        "Entity": "Fact_NoclegiWielkopolska"
                       }
                     },
                     "Property": "Wartosc"
@@ -248,7 +248,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "DANE_Wielkopolska"
+                            "Entity": "Fact_NoclegiWielkopolska"
                           }
                         },
                         "Property": "Kraje"
@@ -291,7 +291,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "DANE_Wielkopolska"
+                            "Entity": "Fact_NoclegiWielkopolska"
                           }
                         },
                         "Property": "Kraje"
@@ -333,7 +333,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "DANE_Wielkopolska"
+                            "Entity": "Fact_NoclegiWielkopolska"
                           }
                         },
                         "Property": "Kraje"
@@ -385,7 +385,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
             "Property": "Kraje"
@@ -397,7 +397,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DANE_Wielkopolska",
+              "Entity": "Fact_NoclegiWielkopolska",
               "Type": 0
             }
           ],
@@ -446,7 +446,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
             "Property": "Rok"
@@ -463,7 +463,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
+                    "Entity": "Fact_NoclegiWielkopolska"
                   }
                 },
                 "Property": "Wartosc"
@@ -481,7 +481,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
             "Property": "Turyści/Noclegi - etykieta"
@@ -493,7 +493,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DANE_Wielkopolska",
+              "Entity": "Fact_NoclegiWielkopolska",
               "Type": 0
             }
           ],

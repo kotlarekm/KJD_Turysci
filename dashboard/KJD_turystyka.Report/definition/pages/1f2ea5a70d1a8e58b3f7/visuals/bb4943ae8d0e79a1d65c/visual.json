@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "bb4943ae8d0e79a1d65c",
   "position": {
     "x": 674.44444444444434,
@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Kraje"
@@ -41,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DANE_Wielkopolska"
+                          "Entity": "Fact_NoclegiWielkopolska"
                         }
                       },
                       "Property": "Wartosc"
@@ -65,7 +65,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "DANE_Wielkopolska"
+                        "Entity": "Fact_NoclegiWielkopolska"
                       }
                     },
                     "Property": "Wartosc"
@@ -133,7 +133,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
             "Property": "Kraje"
@@ -145,7 +145,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DANE_Wielkopolska",
+              "Entity": "Fact_NoclegiWielkopolska",
               "Type": 0
             }
           ],
@@ -205,6 +205,25 @@
             }
           ]
         }
+      },
+      {
+        "name": "2d053e96d6934e90da93",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_NoclegiWielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

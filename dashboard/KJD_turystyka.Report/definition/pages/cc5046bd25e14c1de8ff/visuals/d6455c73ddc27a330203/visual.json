@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Dim_Rok"
                     }
                   },
                   "Property": "Rok"
                 }
               },
-              "queryRef": "DANE_Wielkopolska.Rok",
+              "queryRef": "Dim_Rok.Rok",
               "nativeQueryRef": "Rok",
               "active": true
             }
@@ -55,5 +55,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7cfe3a91a2cbf4f8a2c0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Rok"
+              }
+            },
+            "Property": "Rok"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

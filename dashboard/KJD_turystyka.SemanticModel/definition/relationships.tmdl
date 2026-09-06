@@ -1,10 +1,22 @@
 relationship a313a35f-094a-7b32-ad70-2cdccbb0aa00
-	fromColumn: DANE_Wielkopolska.'Turyści zagraniczni/Noclegi'
+	fromColumn: Fact_NoclegiWielkopolska.'Turyści zagraniczni/Noclegi'
 	toColumn: DIM_Kategoria.Kategoria
 
-relationship cb1e7fd2-3ce4-6670-3bf6-bf5613dc9e13
-	crossFilteringBehavior: bothDirections
-	toCardinality: many
-	fromColumn: MiejscaNoclegowe.Kod
-	toColumn: DANE_Wielkopolska.Kod
+relationship AutoDetected_31cfe677-72f7-4c23-a458-92f10f4fa9ce
+	fromColumn: Fact_NoclegiWielkopolska.'Kod Teryt'
+	toColumn: Dim_Powiat.'Kod Teryt'
+
+relationship fa59f37c-3618-e7cf-12d2-4268e0379774
+	isActive: false
+	fromColumn: Fact_MiejscaNoclegowe.Kod
+	toColumn: Dim_Powiat.'Kod Teryt'
+
+relationship 7508d34a-926f-ab0a-9188-122aef8b33a4
+	fromColumn: Fact_MiejscaNoclegowe.Rok
+	toColumn: Dim_Rok.Rok
+
+relationship 559875bc-5fa0-b8e0-f500-939456c762d8
+	isActive: false
+	fromColumn: Fact_NoclegiWielkopolska.Rok
+	toColumn: Dim_Rok.Rok
 

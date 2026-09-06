@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Kraje"
@@ -39,7 +39,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Turyści/Noclegi - etykieta"
@@ -59,7 +59,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DANE_Wielkopolska"
+                          "Entity": "Fact_NoclegiWielkopolska"
                         }
                       },
                       "Property": "Wartosc"
@@ -83,7 +83,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "DANE_Wielkopolska"
+                        "Entity": "Fact_NoclegiWielkopolska"
                       }
                     },
                     "Property": "Wartosc"
@@ -169,7 +169,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Tytul_Turysci_Noclegi_PL"
@@ -190,7 +190,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
             "Property": "Kraje"
@@ -202,7 +202,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DANE_Wielkopolska",
+              "Entity": "Fact_NoclegiWielkopolska",
               "Type": 0
             }
           ],
@@ -262,6 +262,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "89b67f2e9d7ce1c7d5aa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_NoclegiWielkopolska"
+              }
+            },
+            "Property": "Turyści/Noclegi - etykieta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "eb5f4c244ac4c7c1167d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_NoclegiWielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

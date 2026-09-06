@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Dim_Rok"
                     }
                   },
                   "Property": "Rok"
                 }
               },
-              "queryRef": "DANE_Wielkopolska.Rok",
+              "queryRef": "Dim_Rok.Rok",
               "nativeQueryRef": "Rok",
               "active": true
             }
@@ -37,12 +37,56 @@
     "objects": {
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "d",
+                    "Entity": "Dim_Rok",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 4,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "Rok"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "2023D"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ],
       "data": [
         {
           "properties": {
+            "numericEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "2023D"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
@@ -55,5 +99,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "543ea47b689ea2f339c9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Rok"
+              }
+            },
+            "Property": "Rok"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

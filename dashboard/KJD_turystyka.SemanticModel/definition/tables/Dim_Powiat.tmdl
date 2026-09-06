@@ -1,0 +1,94 @@
+table Dim_Powiat
+	lineageTag: 732bd2aa-bada-44ae-b6c7-e19f6814b22b
+
+	column 'Kod Teryt'
+		dataType: int64
+		formatString: 0
+		lineageTag: eeebde13-c3fa-472e-b6bf-145886c702b0
+		summarizeBy: none
+		sourceColumn: Kod Teryt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teryt województwo'
+		dataType: string
+		lineageTag: 8da01de7-b261-459a-9c97-fd2d26187720
+		summarizeBy: none
+		sourceColumn: Teryt województwo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teryt powiat'
+		dataType: string
+		lineageTag: 9b2daf80-e500-4a9c-9b3a-0e50aa79a146
+		summarizeBy: none
+		sourceColumn: Teryt powiat
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teryt gmina'
+		dataType: string
+		lineageTag: 989cc978-6f92-4e5f-b9fa-8eb96388ed74
+		summarizeBy: none
+		sourceColumn: Teryt gmina
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Teryt rodzaj'
+		dataType: string
+		lineageTag: 149e3175-2958-4635-b534-0fc2edb6c197
+		summarizeBy: none
+		sourceColumn: Teryt rodzaj
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Wojewodztwo nazwa'
+		dataType: string
+		lineageTag: 9e0c4c99-32e0-474b-ae63-6d36b44e7e82
+		summarizeBy: none
+		sourceColumn: Wojewodztwo nazwa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Powiat nazwa'
+		dataType: string
+		lineageTag: 30c7d4e2-65d0-4059-8590-30843b840100
+		summarizeBy: none
+		sourceColumn: Powiat nazwa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nazwa powiatu'
+		dataType: string
+		lineageTag: c637423d-1a2c-4b1a-8ae8-ae1ae2b63439
+		summarizeBy: none
+		sourceColumn: Nazwa powiatu
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Powiat = m
+		mode: import
+		source =
+				let
+				    Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\KJD_Turysci\KJD_Turysci\data\1_TurysciZagraniczniWgKrajow_2016-2025_WojewodztwaPowiaty_DLUGIE_mod.xlsx"), null, true),
+				    DANE_Sheet = Źródło{[Item = "Sheet1", Kind = "Sheet"]}[Data],
+				    #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(DANE_Sheet, [PromoteAllScalars=true]),
+				    #"Zmieniono typ" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie",{{"Kod", Int64.Type}, {"Nazwa", type text}, {"Turyści zagraniczni/Noclegi", type text}, {"Kraje", type text}, {"Rok", Int64.Type}, {"Wartosc", Int64.Type}, {"Jednostka miary", type text}, {"Atrybut", type text}}),
+				    #"Usunięto kolumny" = Table.RemoveColumns(#"Zmieniono typ",{"Jednostka miary", "Atrybut","Column1"}),
+				    #"Podzielono kolumnę według ogranicznika1" = Table.SplitColumn(#"Usunięto kolumny", "Nazwa", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Nazwa.1", "Nazwa.2"}),
+				    #"Zmieniono typ1" = Table.TransformColumnTypes(#"Podzielono kolumnę według ogranicznika1",{{"Nazwa.1", type text}, {"Nazwa.2", type text}}),
+				    #"Zmieniono nazwy kolumn" = Table.RenameColumns(#"Zmieniono typ1",{{"Nazwa.2", "Nazwa powiatu"}}),
+				    #"Dodano kolumnę warunkową" = Table.AddColumn(#"Zmieniono nazwy kolumn", "Turyści/Noclegi - etykieta", each if Text.Contains([#"Turyści zagraniczni/Noclegi"], "turyści zagraniczni") then "Turyści" else if Text.Contains([#"Turyści zagraniczni/Noclegi"], "udzielone noclegi") then "Noclegi" else null),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Dodano kolumnę warunkową",{{"wojewodztwo", type text}, {"Nazwa powiatu", type text}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Powiat nazwa", each Text.Lower("powiat " & Text.Replace([Nazwa powiatu], "m. ","") )),
+				    #"Zmieniono nazwy kolumn1" = Table.RenameColumns(#"Added Custom",{{"Kod", "Kod Teryt"}, {"Nazwa.1", "Typ wiersza"}, {"woj", "Teryt województwo"}, {"pow", "Teryt powiat"}, {"gm", "Teryt gmina"}, {"rodzaj", "Teryt rodzaj"}, {"wojewodztwo", "Wojewodztwo nazwa"}}),
+				    #"Usunięto kolumny1" = Table.RemoveColumns(#"Zmieniono nazwy kolumn1",{"Wartosc", "Rok", "Kraje", "Turyści zagraniczni/Noclegi", "Typ wiersza"}),
+				    #"Usunięto duplikaty" = Table.Distinct(#"Usunięto kolumny1", {"Kod Teryt"}),
+				    #"Usunięto kolumny2" = Table.RemoveColumns(#"Usunięto duplikaty",{"Turyści/Noclegi - etykieta"})
+				in
+				    #"Usunięto kolumny2"
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Table
+

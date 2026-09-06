@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Kraje"
@@ -39,7 +39,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Turyści/Noclegi - etykieta"
@@ -59,7 +59,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "DANE_Wielkopolska"
+                          "Entity": "Fact_NoclegiWielkopolska"
                         }
                       },
                       "Property": "Wartosc"
@@ -83,7 +83,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "DANE_Wielkopolska"
+                        "Entity": "Fact_NoclegiWielkopolska"
                       }
                     },
                     "Property": "Wartosc"
@@ -162,7 +162,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Tytul_Turysci_Noclegi_Wlkp"
@@ -196,7 +196,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
             "Property": "Kraje"
@@ -208,7 +208,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DANE_Wielkopolska",
+              "Entity": "Fact_NoclegiWielkopolska",
               "Type": 0
             }
           ],
@@ -270,58 +270,37 @@
         }
       },
       {
-        "name": "54be71982213bb44c435",
+        "name": "fec68d2c4b1536f5209d",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
-            "Property": "wojewodztwo"
+            "Property": "Turyści/Noclegi - etykieta"
           }
         },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "d",
-              "Entity": "DANE_Wielkopolska",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "wojewodztwo"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Wielkopolskie'"
-                        }
-                      }
-                    ]
-                  ]
-                }
+        "type": "Categorical"
+      },
+      {
+        "name": "87289a90f6a71b1d2ec0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_NoclegiWielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
               }
-            }
-          ]
+            },
+            "Function": 0
+          }
         },
-        "howCreated": "User"
+        "type": "Advanced"
       }
     ]
   }

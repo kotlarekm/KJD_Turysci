@@ -20,7 +20,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Przyrost_YoY"
@@ -40,7 +40,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
+                    "Entity": "Fact_NoclegiWielkopolska"
                   }
                 },
                 "Property": "Przyrost_YoY"
@@ -86,7 +86,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "DANE_Wielkopolska"
+                                      "Entity": "Fact_NoclegiWielkopolska"
                                     }
                                   },
                                   "Property": "Przyrost_YoY"
@@ -113,7 +113,7 @@
                                 "Measure": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "DANE_Wielkopolska"
+                                      "Entity": "Fact_NoclegiWielkopolska"
                                     }
                                   },
                                   "Property": "Przyrost_YoY"
@@ -161,7 +161,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Tytul_Turysci_Noclegi_YoY"
@@ -177,15 +177,29 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ab2fc3b88e4883dad6cd",
+        "name": "bb7e7ed05e90ef92053e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_NoclegiWielkopolska"
+              }
+            },
+            "Property": "Przyrost_YoY"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "289241aa21de7559ac15",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Dim_Powiat"
               }
             },
-            "Property": "wojewodztwo"
+            "Property": "Wojewodztwo nazwa"
           }
         },
         "type": "Categorical",
@@ -194,41 +208,60 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DANE_Wielkopolska",
+              "Entity": "Dim_Powiat",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "Wojewodztwo nazwa"
                           }
-                        },
-                        "Property": "wojewodztwo"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Wielkopolskie'"
                         }
-                      }
-                    ]
-                  ]
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
                 }
               }
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }

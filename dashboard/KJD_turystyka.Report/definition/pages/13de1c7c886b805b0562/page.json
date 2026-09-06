@@ -13,7 +13,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
             "Property": "Kraje"
@@ -25,7 +25,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DANE_Wielkopolska",
+              "Entity": "Fact_NoclegiWielkopolska",
               "Type": 0
             }
           ],
@@ -88,10 +88,10 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
-            "Property": "wojewodztwo"
+            "Property": "Wojewodztwo nazwa"
           }
         },
         "type": "Categorical",
@@ -100,7 +100,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DANE_Wielkopolska",
+              "Entity": "Fact_NoclegiWielkopolska",
               "Type": 0
             }
           ],
@@ -116,7 +116,7 @@
                             "Source": "d"
                           }
                         },
-                        "Property": "wojewodztwo"
+                        "Property": "Wojewodztwo nazwa"
                       }
                     }
                   ],
@@ -142,10 +142,10 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
-            "Property": "Nazwa.1"
+            "Property": "Typ wiersza"
           }
         },
         "type": "Categorical",
@@ -154,7 +154,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DANE_Wielkopolska",
+              "Entity": "Fact_NoclegiWielkopolska",
               "Type": 0
             }
           ],
@@ -170,7 +170,7 @@
                             "Source": "d"
                           }
                         },
-                        "Property": "Nazwa.1"
+                        "Property": "Typ wiersza"
                       }
                     }
                   ],
@@ -196,7 +196,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DANE_Wielkopolska"
+                "Entity": "Fact_NoclegiWielkopolska"
               }
             },
             "Property": "Rok"
@@ -208,7 +208,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DANE_Wielkopolska",
+              "Entity": "Fact_NoclegiWielkopolska",
               "Type": 0
             }
           ],

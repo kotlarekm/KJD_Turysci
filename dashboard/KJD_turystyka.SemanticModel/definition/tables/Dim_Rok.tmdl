@@ -1,0 +1,29 @@
+table Dim_Rok
+	lineageTag: 98a9f112-b8ca-405e-b37e-1e6a86bf9089
+
+	column Rok
+		dataType: int64
+		formatString: 0
+		lineageTag: bc1c8a42-2efe-406d-b2b3-5a1d842c690d
+		summarizeBy: none
+		sourceColumn: Rok
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Rok = m
+		mode: import
+		source =
+				let
+				    Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\KJD_Turysci\KJD_Turysci\data\1_TurysciZagraniczniWgKrajow_2016-2025_WojewodztwaPowiaty_DLUGIE_mod.xlsx"), null, true),
+				    DANE_Sheet = Źródło{[Item = "Sheet1", Kind = "Sheet"]}[Data],
+				    #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(DANE_Sheet, [PromoteAllScalars=true]),
+				    #"Usunięto kolumny" = Table.RemoveColumns(#"Nagłówki o podwyższonym poziomie",{"Column1", "Kod", "Nazwa", "Turyści zagraniczni/Noclegi", "Kraje", "Wartosc", "Jednostka miary", "Atrybut", "woj", "pow", "gm", "rodzaj", "wojewodztwo"}),
+				    #"Usunięto duplikaty" = Table.Distinct(#"Usunięto kolumny"),
+				    #"Zmieniono typ" = Table.TransformColumnTypes(#"Usunięto duplikaty",{{"Rok", Int64.Type}})
+				in
+				    #"Zmieniono typ"
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Table
+

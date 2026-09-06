@@ -8,13 +8,15 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["DANE_Wielkopolska","MiejscaNoclegowe"]
+annotation PBI_QueryOrder = ["Fact_NoclegiWielkopolska","Fact_MiejscaNoclegowe","Dim_Powiat","Dim_Rok"]
 
 annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
 
-ref table DANE_Wielkopolska
+ref table Fact_NoclegiWielkopolska
 ref table DIM_Kategoria
-ref table MiejscaNoclegowe
+ref table Fact_MiejscaNoclegowe
+ref table Dim_Powiat
+ref table Dim_Rok
 
 ref cultureInfo pl-PL
 

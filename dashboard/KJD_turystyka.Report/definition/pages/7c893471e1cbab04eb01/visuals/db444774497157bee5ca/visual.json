@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Dim_Powiat"
                     }
                   },
-                  "Property": "wojewodztwo"
+                  "Property": "Wojewodztwo nazwa"
                 }
               },
-              "queryRef": "DANE_Wielkopolska.wojewodztwo",
-              "nativeQueryRef": "wojewodztwo",
+              "queryRef": "Dim_Powiat.Wojewodztwo nazwa",
+              "nativeQueryRef": "Wojewodztwo nazwa",
               "active": true
             }
           ]
@@ -39,13 +39,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DANE_Wielkopolska"
+                      "Entity": "Fact_NoclegiWielkopolska"
                     }
                   },
                   "Property": "Przyrost_YoY"
                 }
               },
-              "queryRef": "DANE_Wielkopolska.Przyrost_YoY",
+              "queryRef": "Fact_NoclegiWielkopolska.Przyrost_YoY",
               "nativeQueryRef": "Przyrost_YoY",
               "format": "0.00%;-0.00%;0.00%"
             }
@@ -59,7 +59,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "DANE_Wielkopolska"
+                    "Entity": "Fact_NoclegiWielkopolska"
                   }
                 },
                 "Property": "Przyrost_YoY"
@@ -154,10 +154,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "DANE_Wielkopolska"
+                            "Entity": "Fact_NoclegiWielkopolska"
                           }
                         },
-                        "Property": "wojewodztwo"
+                        "Property": "Wojewodztwo nazwa"
                       }
                     },
                     "Right": {
@@ -169,6 +169,61 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_Powiat"
+                          }
+                        },
+                        "Property": "Wojewodztwo nazwa"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Wielkopolskie'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]
@@ -202,5 +257,114 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "16cbffb88e09117e3626",
+        "ordinal": 0,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_NoclegiWielkopolska"
+              }
+            },
+            "Property": "Przyrost_YoY"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6e108aa6d952eae8ab53",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Powiat"
+              }
+            },
+            "Property": "Wojewodztwo nazwa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fbe056b07e2b822efc95",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Powiat"
+              }
+            },
+            "Property": "Wojewodztwo nazwa"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "Dim_Powiat",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "Wojewodztwo nazwa"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "filterSortOrder": "Custom"
   }
 }

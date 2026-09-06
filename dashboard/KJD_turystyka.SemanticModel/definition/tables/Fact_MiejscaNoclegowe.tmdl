@@ -1,0 +1,81 @@
+table Fact_MiejscaNoclegowe
+	lineageTag: 0191f220-29aa-43a7-820e-d25cb131d19e
+
+	column Kod
+		dataType: int64
+		formatString: 0
+		lineageTag: 73ebd7ac-5bfa-42d8-bf1e-9606efa00995
+		summarizeBy: sum
+		sourceColumn: Kod
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nazwa
+		dataType: string
+		lineageTag: 375c8d8f-430f-46b8-af05-03a4a457e706
+		summarizeBy: none
+		sourceColumn: Nazwa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Obiekty
+		dataType: string
+		lineageTag: 068cb72d-1a43-4ba4-928d-42ede5dba9cc
+		summarizeBy: none
+		sourceColumn: Obiekty
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Obiekty, miejsca i pokoje'
+		dataType: string
+		lineageTag: 5f926fef-872b-436c-94b1-6046494ea8b4
+		summarizeBy: none
+		sourceColumn: Obiekty, miejsca i pokoje
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rok
+		dataType: int64
+		formatString: 0
+		lineageTag: 02402823-0f17-4802-91d3-92bd7c2a36a9
+		summarizeBy: none
+		sourceColumn: Rok
+
+		annotation SummarizationSetBy = Automatic
+
+	column Wartosc
+		dataType: int64
+		formatString: 0
+		lineageTag: 02f3f66d-8bf4-4828-8bee-9820b1ed096f
+		summarizeBy: sum
+		sourceColumn: Wartosc
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jednostka miary'
+		dataType: string
+		lineageTag: b4509219-5c45-407b-a428-d97279b3c7f5
+		summarizeBy: none
+		sourceColumn: Jednostka miary
+
+		annotation SummarizationSetBy = Automatic
+
+	column Atrybut
+		dataType: string
+		lineageTag: 7fe07b1c-378a-4baa-84eb-efbfad381887
+		summarizeBy: none
+		sourceColumn: Atrybut
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_MiejscaNoclegowe = m
+		mode: import
+		source =
+				let
+				  Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\KJD_Turysci\KJD_Turysci\data\6_obiekty_noclegowe_dlugie.xlsx"), null, true),
+				  #"Nawigacja 1" = Źródło{[Item = "DANE", Kind = "Sheet"]}[Data],
+				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(#"Nawigacja 1", [PromoteAllScalars = true]),
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"Kod", Int64.Type}, {"Nazwa", type text}, {"Obiekty", type text}, {"Obiekty, miejsca i pokoje", type text}, {"Rok", Int64.Type}, {"Wartosc", Int64.Type}, {"Jednostka miary", type text}, {"Atrybut", type text}}, "pl")
+				in
+				  #"Zmieniono typ kolumny"
+

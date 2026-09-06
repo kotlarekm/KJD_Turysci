@@ -10,21 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 695.70634830068366,
-            "y": 0
-          },
-          "nodeIndex": "DANE_Wielkopolska",
-          "nodeLineageTag": "fafda941-9cd1-4d05-87ff-16fd348617f8",
-          "size": {
-            "height": 224,
-            "width": 234
-          },
-          "zIndex": 4
-        },
-        {
-          "location": {
-            "x": 418,
-            "y": 506.5
+            "x": 244.531137453933,
+            "y": 405.93834055300471
           },
           "nodeIndex": "DIM_Kategoria",
           "nodeLineageTag": "2ac56227-db5a-42c4-b109-ba1551739c2e",
@@ -32,23 +19,62 @@
             "height": 200,
             "width": 234
           },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 583.83150216590138,
+            "y": 0
+          },
+          "nodeIndex": "Fact_NoclegiWielkopolska",
+          "size": {
+            "height": 799.71550033404822,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1655.9530153795695,
+            "y": 299.83949735937807
+          },
+          "nodeIndex": "Fact_MiejscaNoclegowe",
+          "nodeLineageTag": "0191f220-29aa-43a7-820e-d25cb131d19e",
+          "size": {
+            "height": 342.39316161289673,
+            "width": 234
+          },
           "zIndex": 2
         },
         {
           "location": {
-            "x": 986.07813995388267,
-            "y": 226.84126966013673
+            "x": 1028.45897073306,
+            "y": 791.24090501519743
           },
-          "nodeIndex": "MiejscaNoclegowe",
+          "nodeIndex": "Dim_Powiat",
+          "nodeLineageTag": "732bd2aa-bada-44ae-b6c7-e19f6814b22b",
           "size": {
-            "height": 272,
+            "height": 248,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1088.387228227585,
+            "y": 68.8176289348554
+          },
+          "nodeIndex": "Dim_Rok",
+          "nodeLineageTag": "98a9f112-b8ca-405e-b37e-1e6a86bf9089",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3
         }
       ],
       "name": "Wszystkie tabele",
-      "zoomValue": 79.55318203769987,
+      "zoomValue": 61.281510072783931,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

@@ -59,9 +59,7 @@ Pytania:
 
 To do:
     - Poprawki:   
-        - mapa Azure - zrobić, żeby nie znikało jak się przeklika z turystów na noclegi
-	    - Scalić Turystów i noclegi w jedną stronę
-        - Usunąć tytuły osi tam gdzie niepotrzbne - opisać je w tytule wykresu
+        
 	    - Opis modelu danych
         - Opis repozytorium
        
@@ -93,7 +91,10 @@ To do:
         - Slicer Rok - wielkość czcionki
         - Poprawić model danych
         - KPI_Measures
-
+	    - Scalić Turystów i noclegi w jedną stronę
+        - Usunąć tytuły osi tam gdzie niepotrzbne - opisać je w tytule wykresu
+        - mapa Azure - zrobić, żeby nie znikało jak się przeklika z turystów na noclegi
+        
     - anulowane 
         - miara: miejsce noclegowe per zagraniczny turysta
         - Jedne dane, dodaj podział na województwa

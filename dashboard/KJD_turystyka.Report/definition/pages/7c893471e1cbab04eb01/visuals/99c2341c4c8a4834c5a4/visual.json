@@ -7,7 +7,7 @@
     "z": 16000,
     "height": 117.68996960486322,
     "width": 192.58358662613983,
-    "tabOrder": 12000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -340,20 +340,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "6193b1c11d925dda1ba1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "KPI_Measures"
-              }
-            },
-            "Property": "CAGR"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

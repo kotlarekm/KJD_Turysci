@@ -7,7 +7,7 @@
     "z": 14000,
     "height": 160.48632218844986,
     "width": 402.67477203647417,
-    "tabOrder": 10000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "lineChart",
@@ -100,6 +100,13 @@
                   "Value": "'Długość noclegu'"
                 }
               }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -121,5 +128,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4ccfd73fdcef02078451",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_NoclegiWielkopolska"
+              }
+            },
+            "Property": "Rok"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4b6feed0a53faf557267",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPI_Measures"
+              }
+            },
+            "Property": "Srednia dlugosc noclegu"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

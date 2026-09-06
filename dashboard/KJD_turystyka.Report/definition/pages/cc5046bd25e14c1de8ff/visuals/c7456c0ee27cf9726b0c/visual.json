@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 179.93920972644378,
     "width": 201.33738601823708,
-    "tabOrder": 19003
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "slicer",
@@ -59,13 +59,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Basic'"
-                }
-              }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }

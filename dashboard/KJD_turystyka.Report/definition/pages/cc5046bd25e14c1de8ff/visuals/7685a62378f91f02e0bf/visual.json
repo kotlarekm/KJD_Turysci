@@ -7,7 +7,7 @@
     "z": 9000,
     "height": 299.57446808510639,
     "width": 401.7021276595745,
-    "tabOrder": 5000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -147,6 +147,13 @@
                   "Value": "'Suma turystów/ noclegów'"
                 }
               }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -159,7 +166,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Turyści i noclegi wg powiatów'"
+                  "Value": "'Suma turystów i noclegów wg powiatów'"
                 }
               }
             }
@@ -243,6 +250,53 @@
             }
           ]
         }
+      },
+      {
+        "name": "fe6b7569889110eaa2fa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Powiat"
+              }
+            },
+            "Property": "Nazwa powiatu"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "94102c18106de192c972",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_NoclegiWielkopolska"
+              }
+            },
+            "Property": "Turyści/Noclegi - etykieta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1f9ec883c9c05ad9818f",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_NoclegiWielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 99.209726443769,
     "width": 201.33738601823708,
-    "tabOrder": 19004
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "slicer",
@@ -104,23 +104,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2acbdcd42c2dc9e17844",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_NoclegiWielkopolska"
-              }
-            },
-            "Property": "Turyści/Noclegi - etykieta"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

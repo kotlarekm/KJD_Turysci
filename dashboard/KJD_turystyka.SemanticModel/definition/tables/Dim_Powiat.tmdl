@@ -1,6 +1,9 @@
 table Dim_Powiat
 	lineageTag: 732bd2aa-bada-44ae-b6c7-e19f6814b22b
 
+	measure Tytul_Turysci_Noclegi_CAGR_powiat = IF(SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta]) = "Turyści", "Przyrost CAGR liczby turystów wg powiatu", "Przyrost CAGR liczby noclegów wg powiatu")
+		lineageTag: 1ae7f468-96c0-414b-aa03-a42c9674f41e
+
 	column 'Kod Teryt'
 		dataType: int64
 		formatString: 0

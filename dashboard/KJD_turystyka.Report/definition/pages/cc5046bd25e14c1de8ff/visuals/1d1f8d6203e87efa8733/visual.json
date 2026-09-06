@@ -7,7 +7,7 @@
     "z": 22000,
     "height": 151.73252279635258,
     "width": 193.55623100303953,
-    "tabOrder": 19000
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -335,20 +335,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "40e059f888b7e850be8f",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "KPI_Measures"
-              }
-            },
-            "Property": "Regresja_Slope"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

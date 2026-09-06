@@ -7,7 +7,7 @@
     "z": 17000,
     "height": 206.20060790273558,
     "width": 413.37386018237083,
-    "tabOrder": 17000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "lineChart",
@@ -155,6 +155,13 @@
                   "Value": "'Suma turystów'"
                 }
               }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -269,6 +276,19 @@
             ]
           }
         }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -278,7 +298,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Turyści wg lat'"
+                  "Value": "'Suma turystów wg lat'"
                 }
               }
             },

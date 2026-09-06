@@ -7,7 +7,7 @@
     "z": 14000,
     "height": 198.88888888888889,
     "width": 402.22222222222223,
-    "tabOrder": 10000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "lineChart",
@@ -156,13 +156,6 @@
       "valueAxis": [
         {
           "properties": {
-            "start": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
             "titleText": {
               "expr": {
                 "Literal": {
@@ -174,6 +167,33 @@
               "expr": {
                 "Literal": {
                   "Value": "9D"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -188,7 +208,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Miejsca noclegowe wg lat'"
+                  "Value": "'Suma miejsc noclegowych wg lat'"
                 }
               }
             },
@@ -259,6 +279,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "4b1409b62523c620953b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_MiejscaNoclegowe"
+              }
+            },
+            "Property": "Rok"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0d2baf98482fc55bb8fd",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_MiejscaNoclegowe"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

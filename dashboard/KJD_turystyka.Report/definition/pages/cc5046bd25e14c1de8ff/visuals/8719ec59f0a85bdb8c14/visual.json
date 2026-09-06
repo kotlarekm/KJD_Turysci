@@ -7,7 +7,7 @@
     "z": 15000,
     "height": 126.44376899696049,
     "width": 192.58358662613983,
-    "tabOrder": 11000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -99,23 +99,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a6c423036778227dadd5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "KPI_Measures"
-              }
-            },
-            "Property": "Srednia dlugosc noclegu"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

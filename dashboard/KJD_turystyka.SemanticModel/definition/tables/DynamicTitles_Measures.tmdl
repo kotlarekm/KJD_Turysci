@@ -13,12 +13,6 @@ table DynamicTitles_Measures
 			```
 		lineageTag: 9fc31e3e-debb-4b4b-9a48-00eda5fad332
 
-	measure Tytul_Turysci_Noclegi_Wlkp = ```
-			
-			    [WyborTurysciNoclegi] & " w Wielkopolsce"
-			```
-		lineageTag: 27504eab-d700-420a-8f8a-2773547f77b0
-
 	measure WyborTurysciNoclegi = ```
 			
 			    SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta])
@@ -37,6 +31,33 @@ table DynamicTitles_Measures
 			    "Przyrost YoY " & [WyborTurysciNoclegi] 
 			```
 		lineageTag: ac4fde3c-5979-4af7-98b5-05f4dd9372fe
+
+	measure Tytul_Turysci_Noclegi_wg_lat = IF(SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta]) = "Turyści", "Suma turystów wg lat", "Suma noclegów wg lat")
+		lineageTag: 32941d5f-265b-4b66-ae9f-88715771a144
+
+	measure Tytul_Turysci_Noclegi_wg_krajow = IF(SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta]) = "Turyści", "Suma turystów wg krajów", "Suma noclegów wg krajów")
+		lineageTag: 0c8bc1e8-2be4-4af4-8e89-d91cf3d14865
+
+	measure Tytul_Turysci_Noclegi_wg_powiatow = IF(SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta]) = "Turyści", "Suma turystów wg powiatów", "Suma noclegów wg powiatów")
+		lineageTag: 43b3d00f-baef-4168-9793-d0a079c9a404
+
+	measure Tytul_Turysci_Noclegi_CAGR_powiaty = IF(SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta]) = "Turyści", "Przyrost CAGR liczby turystów wg powiatu", "Przyrost CAGR liczby noclegów wg powiatu")
+		lineageTag: 643089c9-73dc-4b90-a229-aa3b86d63aba
+
+	measure Tytul_Turysci_Noclegi_YoY_powiaty = ```
+			IF(SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta]) = "Turyści", "Przyrost YoY liczby turystów ostatnim roku wg powiatu", 
+			"Przyrost YoY liczby noclegów w ostatnim roku wg powiatu")
+			```
+		lineageTag: 6bdb8d0e-1824-4f38-9ea2-62adb8c9492f
+
+	measure Tytul_Turysci_Noclegi_wg_krajow_PL = IF(SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta]) = "Turyści", "Suma turystów wg krajów w wybranych województwach", "Suma noclegów wg krajów w wybranych województwach")
+		lineageTag: fb4ee271-3ad4-4fc9-bfaa-114db01cc2df
+
+	measure Tytul_Turysci_Noclegi_wg_krajow_Wlkp = IF(SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta]) = "Turyści", "Suma turystów wg krajów w Wielkopolsce", "Suma noclegów wg krajów w Wielkopolsce")
+		lineageTag: 0ea3e461-3370-4a9a-b38b-8596ff0702f1
+
+	measure Tytul_Turysci_Noclegi_wg_wojewodztwa = IF(SELECTEDVALUE('Fact_NoclegiWielkopolska'[Turyści/Noclegi - etykieta]) = "Turyści", "Suma turystów wg województwa", "Suma noclegów wg województwa")
+		lineageTag: c43146c1-7a4f-4733-8815-3003e01613b5
 
 	column Placeholder
 		formatString: 0

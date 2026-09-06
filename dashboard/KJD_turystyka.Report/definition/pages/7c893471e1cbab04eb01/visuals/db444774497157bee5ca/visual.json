@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "db444774497157bee5ca",
   "position": {
-    "x": 240.24316109422494,
-    "y": 389.05775075987845,
+    "x": 574.34528773978309,
+    "y": 378.98248540450373,
     "z": 19000,
     "height": 323.89057750759878,
     "width": 309.30091185410333,
-    "tabOrder": 15000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -105,7 +105,7 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

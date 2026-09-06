@@ -7,7 +7,7 @@
     "z": 19000,
     "height": 118.66261398176292,
     "width": 201.33738601823708,
-    "tabOrder": 18001
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "slicer",
@@ -131,23 +131,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b87b5c767462e9c6cbd6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Rok"
-              }
-            },
-            "Property": "Rok"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

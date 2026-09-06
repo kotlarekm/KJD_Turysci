@@ -7,7 +7,7 @@
     "z": 8000,
     "height": 323.89057750759878,
     "width": 311.24620060790272,
-    "tabOrder": 4000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -101,6 +101,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'Suma wartości'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -249,7 +263,7 @@
                       "Entity": "DynamicTitles_Measures"
                     }
                   },
-                  "Property": "Tytul_Turysci_Noclegi_Wojewodztwo"
+                  "Property": "Tytul_Turysci_Noclegi_wg_wojewodztwa"
                 }
               }
             }
@@ -340,6 +354,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "1ad5308c7605662f84dd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Powiat"
+              }
+            },
+            "Property": "Wojewodztwo nazwa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b98e06ccf7adab1d0a94",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_NoclegiWielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

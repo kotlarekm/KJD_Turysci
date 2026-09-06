@@ -7,7 +7,7 @@
     "z": 15000,
     "height": 220,
     "width": 402.22222222222223,
-    "tabOrder": 11000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "lineChart",
@@ -156,17 +156,37 @@
       "valueAxis": [
         {
           "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Suma obiektów'"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "start": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
                 }
               }
-            },
-            "titleText": {
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "'Suma obiektów'"
+                  "Value": "false"
                 }
               }
             }
@@ -181,7 +201,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Obiekty noclegowe wg lat'"
+                  "Value": "'suma obiektów noclegowych wg lat'"
                 }
               }
             },
@@ -252,6 +272,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "941b5dbc740286307e1b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_MiejscaNoclegowe"
+              }
+            },
+            "Property": "Rok"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6ea75dc5babb4d6f45b9",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_MiejscaNoclegowe"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 180.91185410334347,
     "width": 201.33738601823708,
-    "tabOrder": 18002
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "slicer",
@@ -110,23 +110,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f4e41e07bcec3ff60656",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_NoclegiWielkopolska"
-              }
-            },
-            "Property": "Kraje"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

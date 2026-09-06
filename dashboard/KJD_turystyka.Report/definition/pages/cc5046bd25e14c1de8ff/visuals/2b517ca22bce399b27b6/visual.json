@@ -180,7 +180,7 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -215,7 +215,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Turyści i noclegi wg krajów'"
+                  "Value": "'Suma turystów i noclegów wg krajów'"
                 }
               }
             }
@@ -325,6 +325,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "2ea45b6e2ae137c8e0fe",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_NoclegiWielkopolska"
+              }
+            },
+            "Property": "Turyści/Noclegi - etykieta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "32af977b2a9bce01bede",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_NoclegiWielkopolska"
+                  }
+                },
+                "Property": "Wartosc"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
